@@ -1,0 +1,43 @@
+$colors: (
+    orange-red: rgb(236, 82, 82),
+    dark-red: rgb(153, 35, 55),
+    white: #fff,
+    black: #000,
+    light-black: rgb(80, 87, 99),
+    grey-0: rgba(20, 23, 28, 0.05),
+    light-grey: rgb(104, 111, 122),
+    lighter-grey: rgb(222, 223, 224),
+    dark-blue: rgb(0, 119, 145),
+    yellow-orange: rgb(244, 193, 80),
+);
+
+$font-sizes :(
+    fz-1: 1.2rem,
+    fz-7: 1.3rem,
+    fz-2: 1.5rem,
+    fz-3: 1.8rem,
+    fz-4: 2rem,
+    fz-5:2.4rem,
+    fz-6:3.2rem,
+);
+
+$paddings : (
+    p-1: 1rem,
+    p-2:1.1rem,
+    p-3: 1.2rem,
+    p-4: 1.5rem,
+    p-5:1.6rem,
+    p-6:3.2rem,
+);
+
+$margins: (
+    m-1: 1rem,
+    m-2 :1.5rem,
+    m-3 : 1.8rem,
+    m-4: 2rem,
+);
+
+$font-weights : (
+    fw-4: 400,
+    fw-7: 700,
+);

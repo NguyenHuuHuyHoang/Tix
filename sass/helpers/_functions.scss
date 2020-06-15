@@ -1,0 +1,36 @@
+@function c($color) {
+    @if map-has-key($map: $colors, $key: $color) {
+        @return map-get($map: $colors, $key: $color);
+    }
+    @return "";
+};
+
+@function fz($font-size) {
+    @if map-has-key($map: $font-sizes, $key: $font-size) {
+        @return map-get($map: $font-sizes, $key: $font-size);
+    }
+    @return "";
+};
+
+@function fw($font-weight) {
+    @if map-has-key($map: $font-weights, $key: $font-weight) {
+        @return map-get($map: $font-weights, $key: $font-weight);
+    }
+    @return "";
+};
+
+@function p($padding) {
+    @if map-has-key($map: $paddings, $key: $padding) {
+        @return map-get($map: $paddings, $key: $padding);
+    }
+    @return "";
+};
+
+@function m($margin) {
+    @if map-has-key($map: $margins, $key: $margin) {
+        @return map-get($map: $margins, $key: $margin);
+    }
+    @return "";
+};
+
+

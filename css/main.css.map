@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,CAAC,CAAC;EACE,OAAO,EAAG,CAAC;EACX,MAAM,EAAG,CAAC;EACV,UAAU,EAAE,UAAU;CACzB",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/base/_base-dir.scss",
+        "../sass/base/_reset.scss",
+        "../sass/base/_typography.scss",
+        "../sass/base/_normalize.scss",
+        "../sass/helpers/_helpers-dir.scss",
+        "../sass/helpers/_variables.scss",
+        "../sass/helpers/_functions.scss",
+        "../sass/helpers/_mixins.scss",
+        "../sass/helpers/_placeholders.scss",
+        "../sass/components/_components-dir.scss",
+        "../sass/pages/_pages-dir.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
