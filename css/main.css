@@ -1,14 +1,123 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 * {
   padding: 0;
   margin: 0;
+}
+
+html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 body {
   font-family: 'Roboto', 'Helvetica','Arial' , sans-serif;
   font-size: 0.875rem;
+}
+
+.film-title span:first-child, .film-title--p span:first-child {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFF;
+  display: inline-block;
+  background-color: #fb4226;
+  text-align: center;
+  border-radius: 5px;
+  padding: 0px 5px;
+  margin-right: 5px;
+  min-width: 33px;
+}
+
+.film-title span:last-child, .film-title--p span:last-child {
+  font-size: 14;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.film-title--p span:first-child {
+  background-color: #00ac4d;
+}
+
+.film-info {
+  font-size: 0.8125rem;
+  font-weight: "";
+  color: #9b9b9b;
+}
+
+.film-poster__starRating {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  max-width: 54px;
+  text-align: center;
+  background-color: rgba(12, 27, 54, 0.8);
+  border: 1px solid #1f2e46;
+  border-radius: 4px;
+  padding: 2px;
+  color: #FFF;
+  line-height: 1;
+}
+
+.film-poster__starRating img {
+  max-width: 8px;
+}
+
+.film-poster__thumbnail {
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 4px;
+  padding-top: 147.90697674%;
+  background-position: center, 0 0;
+  background-size: 100% auto;
+  background-repeat: no-repeat, repeat-y;
+}
+
+.film-poster__thumbnail::before {
+  content: '';
+  width: 100px;
+  height: 50px;
+  display: block;
+  background-image: url("../../img/film_type_3.png");
+  background-size: cover;
+  position: absolute;
+  top: -25px;
+  left: -15px;
+  display: none;
+}
+
+.film-poster__thumbnail::after {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #FFF;
+  content: 'Suất Chiếu Sớm';
+  display: inline-block;
+  background-color: #fb4226;
+  text-align: center;
+  border-radius: 5px;
+  padding: 4px 8px;
+  min-width: 33px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: none;
+}
+
+.film-poster__bottom .film-title--p span:last-child {
+  font-size: 1rem;
+}
+
+.film-poster__bottom .film-info {
+  font-size: 0.8125rem;
+  color: #4A4A4A;
+}
+
+.film-poster--sneak .film-poster::after, .film-poster--sneak .film-poster--sneak::after {
+  display: block;
 }
 
 /*!

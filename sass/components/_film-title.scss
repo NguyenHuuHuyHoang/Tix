@@ -1,0 +1,104 @@
+.film-title {
+    span:first-child {
+        @include text(fz(fz-0), fw(fw-3), c(white-0));
+        display: inline-block;
+        background-color: c(red-1);
+        text-align: center;
+        border-radius: 5px;
+        padding: 0px 5px;
+        margin-right: 5px;
+        min-width: 33px;
+    }
+
+    span:last-child {
+        @include font-size(14);
+        font-weight: fw(fw-3);
+    }
+}
+
+.film-title--p {
+    @extend .film-title;
+
+    span:first-child {
+        background-color: c(green-1);
+    }
+}
+
+.film-info {
+    @include text(fz(fz-1), fw(fz-2), c(grey-2));
+}
+
+.film-poster {
+    &__starRating {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        max-width: 54px;
+        text-align: center;
+        background-color: rgba(12, 27, 54, .8);
+        border: 1px solid #1f2e46;
+        border-radius: 4px;
+        padding: 2px;
+        color: c('white-0');
+        line-height: 1;
+
+        img {
+            max-width: 8px;
+        }
+    }
+
+    &__thumbnail {
+        margin-bottom: 10px;
+        position: relative;
+        border-radius: 4px;
+        padding-top: 147.90697674%;
+        background-position: center, 0 0;
+        background-size: 100% auto;
+        background-repeat: no-repeat, repeat-y;
+    }
+
+    &__thumbnail::before {
+        content: '';
+        width: 100px;
+        height: 50px;
+        display: block;
+        background-image: url("../../img/film_type_3.png");
+        background-size: cover;
+        position: absolute;
+        top: -25px;
+        left: -15px;
+        display: none;
+    }
+
+    &__thumbnail::after {
+        @include text(fz(fz-0), fw(fw-3), c(white-0));
+        content: 'Suất Chiếu Sớm';
+        display: inline-block;
+        background-color: c(red-1);
+        text-align: center;
+        border-radius: 5px;
+        padding: 4px 8px;
+        min-width: 33px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: none;
+    }
+
+    &__bottom {
+        .film-title--p {
+            span:last-child {
+                font-size: 1rem;
+            }
+        }
+
+        .film-info {
+            font-size: fz(fz-1);
+            color: c(black-1);
+        }
+    }
+}
+
+.film-poster--sneak {
+    @extend .film-poster;
+}
