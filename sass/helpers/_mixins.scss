@@ -25,7 +25,15 @@ $XL:   1200px;
    @media only screen and (max-width: $XL) { @content; } 
   }
 }
+@mixin fullImage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
 
+@mixin transition50 {
+  transition: (all 0.5s ease-out 0s);
+}
 
 @mixin addTriagle($color, $rotage_degree){
   content: '';

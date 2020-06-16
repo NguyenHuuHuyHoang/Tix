@@ -1,4 +1,6 @@
 @import './base/base-dir';
 @import './helpers/helpers-dir';
 @import './components/components-dir';
-@import './pages/pages-dir';
+@import './vendors/vendors-dir';
+
+@import './pages/home';

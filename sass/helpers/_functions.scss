@@ -33,4 +33,7 @@
     @return "";
 };
 
+@function bg($imageName){
+    @return url($image-path + $imageName);
+}
 
