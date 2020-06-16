@@ -57,34 +57,7 @@
         background-repeat: no-repeat, repeat-y;
     }
 
-    &__thumbnail::before {
-        content: '';
-        width: 100px;
-        height: 50px;
-        display: block;
-        background-image: url("../../img/film_type_3.png");
-        background-size: cover;
-        position: absolute;
-        top: -25px;
-        left: -15px;
-        display: none;
-    }
-
-    &__thumbnail::after {
-        @include text(fz(fz-0), fw(fw-3), c(white-0));
-        content: 'Suất Chiếu Sớm';
-        display: inline-block;
-        background-color: c(red-1);
-        text-align: center;
-        border-radius: 5px;
-        padding: 4px 8px;
-        min-width: 33px;
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        display: none;
-    }
-
+   
     &__bottom {
         .film-title--p {
             span:last-child {
@@ -97,8 +70,37 @@
             color: c(black-1);
         }
     }
+
+    &__overlay {
+        
+    }
 }
 
 .film-poster--sneak {
-    @extend .film-poster;
+    .film-poster__thumbnail::before {
+        content: '';
+        width: 100px;
+        height: 50px;
+        display: block;
+        background-image: url("../../img/film_type_3.png");
+        background-size: cover;
+        position: absolute;
+        top: -25px;
+        left: -15px;
+        display: block;
+    }
+
+    .film-poster__thumbnail::after {
+        @include text(fz(fz-0), fw(fw-3), c(white-0));
+        content: 'Suất Chiếu Sớm';
+        background-color: c(red-1);
+        text-align: center;
+        border-radius: 5px;
+        padding: 4px 8px;
+        min-width: 33px;
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        display: block;
+    }
 }
