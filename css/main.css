@@ -20,6 +20,23 @@ body {
   font-size: 0.875rem;
 }
 
+.btnBuy {
+  font-size: 18px;
+  font-weight: 700;
+  color: #FFF;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  padding: 10px;
+  background-color: #fb4226;
+  border-radius: 4px;
+  display: none;
+}
+
+.btnBuy:hover {
+  color: #FFF;
+  background-color: #FA5238;
+}
+
 .film-title span:first-child, .film-title--p span:first-child {
   font-size: 0.75rem;
   font-weight: 700;
@@ -27,7 +44,7 @@ body {
   display: inline-block;
   background-color: #fb4226;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 4px;
   padding: 0px 5px;
   margin-right: 5px;
   min-width: 33px;
@@ -77,6 +94,11 @@ body {
   background-repeat: no-repeat, repeat-y;
 }
 
+.film-poster__bottom {
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+}
+
 .film-poster__bottom .film-title--p span:last-child {
   font-size: 1rem;
 }
@@ -87,8 +109,8 @@ body {
 }
 
 .film-poster__overlay {
-  -webkit-transition: all 0.5s ease-out 0s;
-  transition: all 0.5s ease-out 0s;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
   opacity: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
   background: linear-gradient(to top, #000, transparent 100%);
@@ -99,23 +121,21 @@ body {
   bottom: 0;
 }
 
-.film-poster__overlay button {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  top: 45%;
-  left: 35%;
-  -webkit-transform: translate(-50% -50%);
-          transform: translate(-50% -50%);
-  color: #FFF;
-}
-
-.film-poster__overlay button img {
-  width: 40px;
+.film-poster__buyTicket {
+  display: none;
 }
 
 .film-poster:hover .film-poster__overlay, .film-poster--sneak:hover .film-poster__overlay {
   opacity: 1;
+  cursor: pointer;
+}
+
+.film-poster:hover .film-poster__bottom, .film-poster--sneak:hover .film-poster__bottom {
+  display: none;
+}
+
+.film-poster:hover .film-poster__buyTicket, .film-poster--sneak:hover .film-poster__buyTicket {
+  display: block;
 }
 
 .film-poster__thumbnail::before {
@@ -147,12 +167,35 @@ body {
   display: none;
 }
 
-.film-poster--sneak .film-poster__thumbnail::before {
+.film-poster--sneak .film-poster__thumbnail::before, .film-poster--sneak .film-poster__thumbnail::after {
   display: block;
 }
 
-.film-poster--sneak .film-poster__thumbnail::after {
-  display: block;
+.popupTrailer {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  -webkit-transform: translate(-50% -50%);
+          transform: translate(-50% -50%);
+  color: #FFF;
+}
+
+.popupTrailer:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.popupTrailer img {
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  width: 40px;
+  opacity: 0.5;
+}
+
+.popupTrailer img:hover {
+  opacity: 1;
 }
 
 /*!

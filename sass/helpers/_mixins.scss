@@ -35,6 +35,10 @@ $XL:   1200px;
   transition: (all 0.5s ease-out 0s);
 }
 
+@mixin transition15 {
+  transition: (all 0.15s ease-out 0s);
+}
+
 @mixin addTriagle($color, $rotage_degree){
   content: '';
   position: absolute;
