@@ -98,11 +98,12 @@
     &:hover &__overlay {
         opacity: 1;
     }
-    
-}
 
-.film-poster--sneak {
-    .film-poster__thumbnail::before {
+    &:hover &__bottom {
+        display: none;
+    }
+
+    &__thumbnail::before {
         content: '';
         width: 100px;
         height: 50px;
@@ -112,10 +113,10 @@
         position: absolute;
         top: -25px;
         left: -15px;
-        display: block;
+        display: none;
     }
 
-    .film-poster__thumbnail::after {
+    &__thumbnail::after {
         @include text(fz(fz-0), fw(fw-3), c(white-0));
         content: 'Suất Chiếu Sớm';
         background-color: c(red-1);
@@ -126,6 +127,18 @@
         position: absolute;
         bottom: 10px;
         right: 10px;
+        display: none;
+    }
+    
+}
+
+.film-poster--sneak {
+    @extend .film-poster;
+    .film-poster__thumbnail::before {
+        display: block;
+    }
+
+    .film-poster__thumbnail::after {
         display: block;
     }
 }
