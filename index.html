@@ -6,7 +6,7 @@
     <title>Tix</title>
     <!-- BOOTSTRAP 4 LIBRARY -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    
 
     <!-- MAIN CSS FILE -->
     <link rel="stylesheet" href="css/main.css">
@@ -14,8 +14,48 @@
 
 </head>
 <body>
-    <i class="fa fa-envelope-open" aria-hidden="true"></i>
-    <button class="btn btn-primary">dasdadadsa</button>
+    <header class="header container-fluid">
+        <nav class="navbar navbar-expand-sm navbar-light">
+            <a class="navbar-brand" href="#"><img src="./img/web-logo.png" alt="" srcset=""></a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav m-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Lịch chiếu<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cụm rạp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Ứng dụng</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__right d-flex">
+                <div class="header__userLogin">
+                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                    <a href="#">Đăng nhập</a>
+                </div>
+                <div class="header__locationSelecter d-flex align-items-center">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <div class="dropdown">
+                        <span>Hồ Chí Minh</span>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                
+                
+
+                
+            </div>
+        </nav>
+    </header>
     
 
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
