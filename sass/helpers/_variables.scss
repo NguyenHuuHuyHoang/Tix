@@ -1,17 +1,21 @@
 $image-path: '../img/';
 
 $colors: (
-     red-1: #fb4226,
-     red-2: #FA5238,
-     green-1: #00ac4d,
-     green-2: #108F3E,
-     grey-1: #949494,
-     grey-2: #9b9b9b,
-     black-0: #000,
-     black-1: #4A4A4A,
-     black-2: #333333,
-     white-0: #FFF,
+     red-dark: #fb4226,
+     red-orange: #FA5238,
+     green-light: #00ac4d,
+     green-dark: #108F3E,
+     grey-light: #949494,
+     grey-lighter: #9b9b9b,
+     black: #000,
+     black-lighter: #4A4A4A,
+     black-light: #333333,
+     white: #FFF,
 );
+
+$primary-color: c('red-dark');
+
+
 
 $font-sizes :(
     fz-0: 0.75rem,   //12px

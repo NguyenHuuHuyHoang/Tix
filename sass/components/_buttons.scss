@@ -1,13 +1,17 @@
-.btnBuy {
-    @include text( 18px, fw(fw-3), c(white-0));
+%button {
+    border-radius: 4px;
+}
+
+
+.button--red {
+    @include text( 18px, fw(fw-3), c('white'));
     @include transition15;
     padding: 10px;
-    background-color: c(red-1);
+    background-color: $primary-color;
     border-radius: 4px;
     display: none;
     
     &:hover {
-        color: c(white-0);
-        background-color: c(red-2);
+        background-color: c('red-orange');
     }
 }

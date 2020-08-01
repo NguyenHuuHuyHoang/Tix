@@ -1,0 +1,61 @@
+%title-secondary {
+    color: c('grey-lighter');
+}
+
+.header {
+    .navbar-brand img{
+        width: 50px
+    }
+    .navbar-light .navbar-nav .nav-link {
+        @extend %transition15;
+        color: c('black-light');
+
+        &:hover {
+            color: c('red-orange')
+        }
+    }
+
+    &__right {
+        @extend %title-secondary;
+    }
+
+
+    &__userLogin {
+
+        padding: 0 10px;
+        border-right: 1px c('grey-lighter') dotted;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        i {
+            font-size: fz(fz-3);
+            margin-right: 10px;
+        }
+
+        a {
+            @extend %title-secondary;
+            text-decoration: none;
+        }
+    }
+
+    &__locationSelecter {
+        padding-left: 10px;
+        min-width: 150px;
+
+        i {
+            font-size: 20px;
+        }
+
+        span {
+            margin-left: 10px;
+            margin-right: 30px;
+            ;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
