@@ -1,0 +1,29 @@
+.select-menu {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.select-show {
+    position:absolute;
+    max-height: 20vh;
+    border: 1px solid #CCC;
+    border-top-left-radius: 0.3rem;
+    border-bottom-left-radius:  0.3rem;
+    overflow:scroll;
+    overflow-x: hidden;
+    box-shadow: 2px 2px 5px 2px #CCC;
+
+    li {
+        @extend %transition15;
+        color: black;
+        list-style: none;
+    }
+
+    li:hover {
+        background-color: c('blue-sky');
+        cursor: pointer;
+        color: white;
+    }
+}
