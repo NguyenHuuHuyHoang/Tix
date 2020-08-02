@@ -9959,8 +9959,8 @@ a.text-dark:focus, a.text-dark:hover {
 }
 
 .header {
-  background: rgba(255, 255, 255, 0.6);
-  max-height: 8vh;
+  background: rgba(255, 255, 255, 0.9);
+  max-height: 8%;
 }
 
 .header .navbar-brand img {
@@ -10012,5 +10012,27 @@ a.text-dark:focus, a.text-dark:hover {
 
 .header__locationSelecter .select-show li {
   padding-left: 20px;
+}
+
+.banner-carousel {
+  height: 50vh;
+}
+
+.banner-carousel .carousel-indicators li {
+  width: 1vw;
+  height: 1vw;
+  border: 1px;
+  border-radius: 50%;
+  background-color: #CCC;
+  opacity: 1;
+}
+
+.banner-carousel .carousel-indicators .active {
+  background-color: #FA5238;
+}
+
+.banner-carousel .carousel-control-next-icon, .banner-carousel .carousel-control-prev-icon {
+  width: 3vw;
+  height: 3vw;
 }
 /*# sourceMappingURL=main.css.map */

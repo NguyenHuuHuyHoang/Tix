@@ -25,19 +25,7 @@ $XL:   1200px;
    @media only screen and (max-width: $XL) { @content; } 
   }
 }
-@mixin fullImage {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
 
-@mixin transition50 {
-  transition: (all 0.5s ease-out 0s);
-}
-
-@mixin transition15 {
-  transition: (all 0.15s ease-out 0s);
-}
 
 @mixin addTriagle($color, $rotage_degree){
   content: '';
@@ -66,14 +54,6 @@ $XL:   1200px;
   height: $width;
   line-height: $width;
 };
-
-@mixin clearfix {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 
 @mixin position($position, $args) {
   @each $o in top right bottom left {
@@ -156,16 +136,8 @@ $XL:   1200px;
   }
 }
 
-@mixin center-block {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@mixin center-vertically {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  @include prefix(transform, translate(-50%, -50%), 'webkit' 'ms');
+@mixin create-square ($size) {
+  width: $size;
+  height: $size;
 }
 
