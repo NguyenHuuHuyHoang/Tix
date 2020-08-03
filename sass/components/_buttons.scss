@@ -1,8 +1,13 @@
 %button {
     border-radius: 4px;
+    padding: .5rem 1rem;
 }
 
+.button-grey {
+    @extend
+    %buttons
 
+}
 .button--red {
     @include text( 18px, fw(fw-3), c('white'));
     @include transition15;

@@ -9939,8 +9939,8 @@ a.text-dark:focus, a.text-dark:hover {
   border-bottom-left-radius: 0.3rem;
   overflow: scroll;
   overflow-x: hidden;
-  -webkit-box-shadow: 2px 2px 5px 2px #CCC;
-          box-shadow: 2px 2px 5px 2px #CCC;
+  -webkit-box-shadow: 1px 1px 3px 1px #BBB;
+          box-shadow: 1px 1px 3px 1px #BBB;
 }
 
 .select-show li {
@@ -9965,6 +9965,18 @@ a.text-dark:focus, a.text-dark:hover {
 
 .header .navbar-brand img {
   width: 50px;
+}
+
+.header .select-show {
+  top: 100%;
+  right: 0;
+  min-width: 160px;
+  background: white;
+  margin-right: 10px;
+}
+
+.header .select-show li {
+  padding-left: 20px;
 }
 
 .header .navbar-light .navbar-nav .nav-link {
@@ -10003,15 +10015,6 @@ a.text-dark:focus, a.text-dark:hover {
 
 .header__locationSelecter:hover {
   cursor: pointer;
-}
-
-.header__locationSelecter .select-show {
-  top: 120%;
-  min-width: 150px;
-}
-
-.header__locationSelecter .select-show li {
-  padding-left: 20px;
 }
 
 .banner-carousel {
