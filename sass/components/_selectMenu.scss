@@ -1,4 +1,5 @@
 .select-menu {
+    @extend %border-right__dotter--grey-lighter;
     position: relative;
     display: flex;
     align-items: center;

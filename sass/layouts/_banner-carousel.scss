@@ -1,5 +1,6 @@
+@import './../components/buttons';
+
 .banner-carousel {
-    height: 50vh;
 
     .carousel-indicators {
         li {
@@ -18,4 +19,18 @@
         @include create-square(3vw);
     }
     
+    .buyTicket {
+        &__content {
+            
+                position: absolute;
+                bottom: 0;
+                background: white;
+                left: 50%;
+                transform: translate(-50%,50%);
+                height: 80px;
+                align-items: center;
+            
+            .select-menu {padding: 0 5px;}
+        }
+    }
 }

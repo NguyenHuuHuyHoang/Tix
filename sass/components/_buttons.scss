@@ -1,22 +1,49 @@
 %button {
+    border: 1px solid black;
     border-radius: 4px;
     padding: .5rem 1rem;
-}
-
-.button-grey {
-    @extend
-    %buttons
 
 }
+
+.button--black-lighter {
+    @extend %button;
+    color: white;
+    background-color: c('black-lighter');
+}
+
 .button--red {
-    @include text( 18px, fw(fw-3), c('white'));
-    @include transition15;
-    padding: 10px;
+    @include text(18px, fw(fw-3), c('white'));
+    @extend %transition15
+    ,%button;
     background-color: $primary-color;
-    border-radius: 4px;
     display: none;
-    
     &:hover {
         background-color: c('red-orange');
+    }
+}
+
+.button__playTrailer--overlay {
+    @extend %transition50,
+    %center-item;
+    opacity: 0;
+    background: linear-gradient(to top, #000, transparent 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    a {
+        @extend %transition50;
+        opacity: 0.5;
+    }
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+
+        a:hover {
+            opacity: 1;
+        }
     }
 }
