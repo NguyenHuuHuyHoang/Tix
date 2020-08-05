@@ -2,7 +2,12 @@
 
 .banner-carousel {
 
+    position: relative;
+
     .carousel-indicators {
+
+        bottom: 50px;
+
         li {
             @include create-square(1vw);
             border: 1px;
@@ -15,22 +20,15 @@
             background-color: c('red-orange');
         }
     }
-    .carousel-control-next-icon, .carousel-control-prev-icon {
-        @include create-square(3vw);
+    .carousel-control-next-icon  {
+        @include create-square(5vw);
+        background-image: url('../../img/next-session.png');
+    }
+
+    .carousel-control-prev-icon {
+        @include create-square(5vw);
+        background-image: url('../../img/back-session.png');
     }
     
-    .buyTicket {
-        &__content {
-            
-                position: absolute;
-                bottom: 0;
-                background: white;
-                left: 50%;
-                transform: translate(-50%,50%);
-                height: 80px;
-                align-items: center;
-            
-            .select-menu {padding: 0 5px;}
-        }
-    }
+    
 }
