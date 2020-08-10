@@ -1,5 +1,6 @@
 @import '../components/selectMenu';
 
+
 %title-secondary {
     color: c('grey-lighter');
 }
@@ -37,7 +38,6 @@ max-height: 8%;
 
 
     &__userLogin {
-        @extend %border-right__dotter--grey-lighter;
         padding: 0 10px;
 
 

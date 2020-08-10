@@ -19,7 +19,7 @@ body {
   font-size: 0.875rem;
 }
 
-.button__playTrailer--overlay, .button__playTrailer--overlay a {
+.button__play-trailer--overlay, .button__play-trailer--overlay a {
   -webkit-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;
 }
@@ -29,11 +29,7 @@ body {
   transition: all 0.15s ease-out 0s;
 }
 
-.select-menu, .header__userLogin {
-  border-right: 1px #9b9b9b dotted;
-}
-
-.button__playTrailer--overlay {
+.button__play-trailer--overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9939,6 +9935,21 @@ a.text-dark:focus, a.text-dark:hover {
     border-color: #dee2e6;
   }
 }
+.border-right--separated {
+  position: relative;
+}
+
+.border-right--separated::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  height: 30px;
+  border-right: 1px solid #e9e9e9;
+}
+
 .select-menu {
   position: relative;
   display: -webkit-box;
@@ -10061,7 +10072,7 @@ a.text-dark:focus, a.text-dark:hover {
   background-color: #FA5238;
 }
 
-.button__playTrailer--overlay {
+.button__play-trailer--overlay {
   opacity: 0;
   background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
   background: linear-gradient(to top, #000, transparent 100%);
@@ -10072,16 +10083,16 @@ a.text-dark:focus, a.text-dark:hover {
   bottom: 0;
 }
 
-.button__playTrailer--overlay a {
+.button__play-trailer--overlay a {
   opacity: 0.5;
 }
 
-.button__playTrailer--overlay:hover {
+.button__play-trailer--overlay:hover {
   opacity: 1;
   cursor: pointer;
 }
 
-.button__playTrailer--overlay:hover a:hover {
+.button__play-trailer--overlay:hover a:hover {
   opacity: 1;
 }
 
@@ -10138,11 +10149,11 @@ a.text-dark:focus, a.text-dark:hover {
 
 .tool-buy-ticket__main-section {
   width: 30%;
-  padding: 0 5px;
+  padding: 0 10px;
 }
 
 .tool-buy-ticket__secondary-section {
   width: calc(70% / 4);
-  padding: 0 5px;
+  padding: 0 10px;
 }
 /*# sourceMappingURL=main.css.map */
