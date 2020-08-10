@@ -21,6 +21,16 @@
     box-shadow: 0px 5px 3px 0px #CCC;
     
 
-.select-menu {padding: 0 5px;}
+&__main-section {
+    width: 30%;
+    padding: 0 5px;
+}
+
+&__secondary-section{
+    width: calc(70% / 4);
+    padding: 0 5px;
+}
+
+
 
 }
