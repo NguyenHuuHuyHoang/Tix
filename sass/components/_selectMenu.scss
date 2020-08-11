@@ -7,13 +7,16 @@
 
 .select-show {
     position:absolute;
+    min-width: 160px;
     max-height: 20vh;
+    top: 100%;
     border: 1px solid #CCC;
     border-top-left-radius: 0.3rem;
     border-bottom-left-radius:  0.3rem;
     overflow:scroll;
     overflow-x: hidden;
     box-shadow: 1px 1px 3px 1px #BBB;
+    background-color: #FFF;
 
     li {
         @extend %transition15;
