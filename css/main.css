@@ -9950,6 +9950,24 @@ a.text-dark:focus, a.text-dark:hover {
   border-right: 1px solid #e9e9e9;
 }
 
+.select-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+
+.select-scroll::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+.select-scroll::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.7);
+}
+
+.select-scroll::-webkit-scrollbar-button {
+  display: none;
+}
+
 .select-menu {
   position: relative;
   display: -webkit-box;
@@ -9966,7 +9984,7 @@ a.text-dark:focus, a.text-dark:hover {
 .select-show {
   position: absolute;
   min-width: 160px;
-  max-height: 20vh;
+  max-height: 300px;
   top: 100%;
   border: 1px solid #CCC;
   border-top-left-radius: 0.3rem;
