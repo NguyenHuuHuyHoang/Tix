@@ -6,68 +6,71 @@
 }
 
 .header {
-    background: rgba(255, 255, 255, 0.9);
-max-height: 8%;
-
-    .navbar-brand img{
-        width: 50px
-    }
-    .select-show {
-        top: 100%;
-        right: 0;
-        min-width: 160px;
-        margin-right: 10px;
     
-        li {
-            padding-left: 20px;
-        }
-    }
-    .navbar-light .navbar-nav .nav-link {
-        @extend %transition15;
-        color: c('black-light');
+    background: rgba(255, 255, 255, 0.9);
+    height: 60px;
 
-        &:hover {
-            color: c('red-orange')
-        }
-    }
+    // .navbar-brand img {
+    //     width: 50px
+    // }
 
-    &__right {
-        @extend %title-secondary;
-    }
+    // .select-show {
+    //     top: 100%;
+    //     right: 0;
+    //     min-width: 160px;
+    //     margin-right: 10px;
+
+    //     li {
+    //         padding-left: 20px;
+    //     }
+    // }
+
+    // .navbar-light .navbar-nav .nav-link {
+    //     @extend %transition15;
+    //     color: c('black-light');
+
+    //     &:hover {
+    //         color: c('red-orange')
+    //     }
+    // }
+
+    // &__right {
+    //     @extend %title-secondary;
+    // }
 
 
-    &__userLogin {
-        padding: 0 10px;
+    // &__userLogin {
+    //     padding: 0 10px;
 
 
-        &:hover {
-            cursor: pointer;
-        }
+    //     &:hover {
+    //         cursor: pointer;
+    //     }
 
-        i {
-            font-size: fz(fz-3);
-            margin-right: 10px;
-        }
+    //     i {
+    //         font-size: fz(fz-3);
+    //         margin-right: 10px;
+    //     }
 
-        a {
-            @extend %title-secondary;
-            text-decoration: none;
-        }
-    }
+    //     a {
+    //         @extend %title-secondary;
+    //         text-decoration: none;
+    //     }
+    // }
 
-    &__locationSelecter {
-        border:none;
-        min-width: 150px;
-        
-        i {
-            font-size: 20px;
-        }
+    // &__locationSelecter {
+    //     border: none;
+    //     min-width: 150px;
 
-        &:hover {
-            cursor: pointer;
-        }
+    //     i {
+    //         font-size: 20px;
+    //     }
 
-        
-    }
+    //     &:hover {
+    //         cursor: pointer;
+    //     }
+
+
+    // }
 
 }

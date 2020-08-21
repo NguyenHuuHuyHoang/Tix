@@ -4,10 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tix</title>
+    <title>TIX Đặt vé nhanh nhất / Trang chủ</title>
+    <link rel="shortcut icon" href="./img/title-icon.png" type="image/x-icon">
     <!-- BOOTSTRAP 4 LIBRARY -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- MAIN CSS FILE -->
     <link rel="stylesheet" href="css/main.css">
@@ -16,9 +18,11 @@
 </head>
 
 <body>
-    <header class="header sticky-top">
-        <nav class="navbar navbar-expand-md navbar-light pt-0 pb-0">
-            <a class="navbar-brand" href="#"><img src="./img/web-logo.png" alt="" srcset=""></a>
+    <!-- START HEADER  -->
+    <header class="header">
+        
+        <!-- <nav class="navbar navbar-expand-md navbar-light pt-0 pb-0">
+            <a class="navbar-brand" href="index.html"><img src="./img/web-logo.png" alt="logo"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
                 data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -86,9 +90,10 @@
                 <li>Nha Trang</li>
                 <li>Bình Dương</li>
             </ul>
-        </nav>
+        </nav> -->
     </header>
-
+    <!-- END HEADER -->
+    <!-- START CAROUSEL -->
     <section class="banner-carousel">
         <div id="carouselExampleIndicators" class="carousel slide d-none d-md-block positive-relative"
             data-ride="carousel">
@@ -120,13 +125,13 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
-            <div class="button__play-trailer--overlay">
+            <div class="button__play-trailer">
                 <a class="popup-youtube popupTrailer" href="https://www.youtube.com/watch?v=It3siK0DAzg">
                     <img src="./img/play-video.png" alt="" srcset="">
                 </a>
             </div>
         </div>
-        <div class="tool-buy-ticket d-flex">
+        <div class="tool-buy-ticket hidden-on-mobile d-lg-flex">
             <div class="tool-buy-ticket__main-section border-right--separated">
                 <div class="select-menu" data-toggle="collapse" data-target="#select-film">
                     <span> Phim</span>
@@ -140,20 +145,21 @@
                     <li>Dinh Thự Oan Khuất - Ghost Of War - (C18)</li>
                 </ul>
             </div>
-            
+
             <div class="tool-buy-ticket__secondary-section border-right--separated">
                 <div class="select-menu " data-toggle="collapse" data-target="#select-theater">
                     <span> Rạp</span>
                     <i class="fa fa-angle-down" aria-hidden="true"></i>
                 </div>
+                <ul class="select-show select-scroll collapse" id="select-theater">
+                    <li>Cá Sấu Tử Thần - Black Water: Abyss - (C18)</li>
+                    <li>Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16)</li>
+                    <li>Mãi Bên Em - Endless - (C13)</li>
+                    <li>Big Hero 6</li>
+                    <li>Dinh Thự Oan Khuất - Ghost Of War - (C18)</li>
+                </ul>
             </div>
-            <ul class="select-show select-scroll collapse" id="select-theater">
-                <li>Cá Sấu Tử Thần - Black Water: Abyss - (C18)</li>
-                <li>Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16)</li>
-                <li>Mãi Bên Em - Endless - (C13)</li>
-                <li>Big Hero 6</li>
-                <li>Dinh Thự Oan Khuất - Ghost Of War - (C18)</li>
-            </ul>
+
             <div class="tool-buy-ticket__secondary-section border-right--separated">
                 <div class="select-menu" data-toggle="collapse" data-target="#select-watching-day">
                     <span> Ngày xem</span>
@@ -196,6 +202,13 @@
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+
+    <script>
+        $('.carousel').carousel({
+  interval: 3000,
+  touch:true,
+})
+    </script>
 </body>
 
 </html>

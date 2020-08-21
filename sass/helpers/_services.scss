@@ -1,0 +1,11 @@
+.hidden-on-mobile {
+    @include responsive(LG) {
+        display: none;
+    }
+}
+
+.hidden-on-desktop {
+    @include responsive(XL) {
+        display: none;
+    }
+}

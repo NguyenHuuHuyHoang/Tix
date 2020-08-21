@@ -19,17 +19,17 @@ body {
   font-size: 0.875rem;
 }
 
-.button__play-trailer--overlay, .button__play-trailer--overlay a {
+.button__play-trailer a, .button__play-trailer--overlay, .button__play-trailer--overlay a {
   -webkit-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;
 }
 
-.select-show li, .header .navbar-light .navbar-nav .nav-link, .button--red {
+.select-show li, .button--red {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
 
-.button__play-trailer--overlay {
+.button__play-trailer, .button__play-trailer--overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,6 +39,18 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .hidden-on-desktop {
+    display: none;
+  }
 }
 
 /*!
@@ -10007,66 +10019,9 @@ a.text-dark:focus, a.text-dark:hover {
   color: white;
 }
 
-.header__right, .header__userLogin a {
-  color: #9b9b9b;
-}
-
 .header {
   background: rgba(255, 255, 255, 0.9);
-  max-height: 8%;
-}
-
-.header .navbar-brand img {
-  width: 50px;
-}
-
-.header .select-show {
-  top: 100%;
-  right: 0;
-  min-width: 160px;
-  margin-right: 10px;
-}
-
-.header .select-show li {
-  padding-left: 20px;
-}
-
-.header .navbar-light .navbar-nav .nav-link {
-  color: #333333;
-}
-
-.header .navbar-light .navbar-nav .nav-link:hover {
-  color: #FA5238;
-}
-
-.header__userLogin {
-  padding: 0 10px;
-}
-
-.header__userLogin:hover {
-  cursor: pointer;
-}
-
-.header__userLogin i {
-  font-size: 1.8rem;
-  margin-right: 10px;
-}
-
-.header__userLogin a {
-  text-decoration: none;
-}
-
-.header__locationSelecter {
-  border: none;
-  min-width: 150px;
-}
-
-.header__locationSelecter i {
-  font-size: 20px;
-}
-
-.header__locationSelecter:hover {
-  cursor: pointer;
+  height: 60px;
 }
 
 .button--black-lighter, .button--red {
@@ -10090,6 +10045,25 @@ a.text-dark:focus, a.text-dark:hover {
 
 .button--red:hover {
   background-color: #FA5238;
+}
+
+.button__play-trailer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.button__play-trailer a {
+  opacity: 0.5;
+}
+
+.button__play-trailer:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.button__play-trailer:hover a:hover {
+  opacity: 1;
 }
 
 .button__play-trailer--overlay {

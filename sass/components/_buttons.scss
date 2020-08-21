@@ -22,6 +22,27 @@
     }
 }
 
+.button__play-trailer {
+    @extend %center-item;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    a {
+        @extend %transition50;
+        opacity: 0.5;
+    }
+
+    &:hover {
+        opacity: 1;
+        cursor: pointer;
+
+        a:hover {
+            opacity: 1;
+        }
+    }
+}
+
 .button__play-trailer--overlay {
     @extend %transition50,
     %center-item;
