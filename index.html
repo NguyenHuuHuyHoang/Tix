@@ -20,18 +20,37 @@
 
 <body>
     <!-- START HEADER  -->
-    <header class="header">
-        <a href="index.html"><img src="./img/web-logo.png" alt="web-logo" class="header__logo"></a>
-        <nav class="header__navbar">
-            Lịch Chiếu
-            Cụm Rạp
-            Tin Tức
-            
-        </nav>
-        <div class="header__right-side">
-            <div class="header__login"></div>
-            <div class="select-menu"></div>
+    <header class="header container-fluid">
+        <a href="index.html"><img src="./img/web-logo.png" alt="tix-logo" class="header__logo"
+                style="width:60px; height:60px"></a>
+        <div class="header__film-search d-flex">
+            <input class="input" placeholder="Tìm kiếm phim" type="text">
+            <div class="icon"><i class="fa fa-search"></i></div>
+            <ul class="header__search-result d-none">
+                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+            </ul>
         </div>
+        <div class="header__buy-ticket-now d-none d-md-block">
+            <button class="button--red">Mua vé ngay</button>
+        </div>
+        <div class="header__login d-none d-md-flex">
+            <div class="header__login--icon">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+           
+            <button>Đăng nhập</button>
+        </div>
+
+
+
+
+
+
+
         <!-- <nav class="navbar navbar-expand-md navbar-light pt-0 pb-0">
             <a class="navbar-brand" href="index.html"><img src="./img/web-logo.png" alt="logo"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -214,12 +233,7 @@
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 
-    <script>
-        $('.carousel').carousel({
-  interval: 3000,
-  touch:true,
-})
-    </script>
+
 </body>
 
 </html>

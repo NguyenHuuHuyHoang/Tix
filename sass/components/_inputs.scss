@@ -1,0 +1,9 @@
+.input {
+
+    padding: 5px 0;
+    text-indent: 5px;
+
+    &:placeholder-shown {
+        text-indent: 5px;
+    }
+}

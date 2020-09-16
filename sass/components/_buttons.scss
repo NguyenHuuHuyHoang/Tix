@@ -1,7 +1,7 @@
 %button {
-    border: 1px solid black;
+    border: 1px solid transparent;
     border-radius: 4px;
-    padding: .5rem 1rem;
+    padding: .2rem 0.4rem;
 
 }
 
@@ -12,13 +12,16 @@
 }
 
 .button--red {
-    @include text(18px, fw(fw-3), c('white'));
+   
     @extend %transition15
     ,%button;
-    background-color: $primary-color;
-    display: none;
+    color: getColor(white);
+    background-color: getColor(red-orange);
+    display: block;
     &:hover {
-        background-color: c('red-orange');
+        color: getColor(red-orange);
+        background-color: getColor(white);
+        border-color: getColor(red-orange);
     }
 }
 
