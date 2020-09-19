@@ -75,15 +75,14 @@
 
 // }
 
-@import '../components/icon';
-@import '../components/inputs';
-@import '../components/buttons';
+
 
 .header {
-    position: sticky;
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     min-width: 380px;
     box-shadow: 2px 3px 5px #AAA;
 
@@ -101,11 +100,9 @@
         z-index: 10;
         background-color: getColor(white);
         padding: 5px 5px 0 5px;
-        width: 100%;
+        width: 98%;
         max-height: 155px;
         overflow-y: auto;
-        box-shadow: 1px 4px 4px #AAA;
-
 
         &>li {
             margin-bottom: 5px;
@@ -116,7 +113,6 @@
 
         &>li:hover {
             color: getColor(red-orange);
-
             cursor: pointer;
         }
     }
@@ -130,6 +126,7 @@
 
     &__film-search>div {
         color: #AAA;
+        background-color: white;
         padding-right: 5px;
         font-size: 1.2rem;
         border: 1px solid #DDD;

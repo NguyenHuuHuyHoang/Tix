@@ -20,37 +20,52 @@
 
 <body>
     <!-- START HEADER  -->
-    <header class="header container-fluid">
-        <a href="index.html"><img src="./img/web-logo.png" alt="tix-logo" class="header__logo"
-                style="width:60px; height:60px"></a>
-        <div class="header__film-search d-flex">
-            <input class="input" placeholder="Tìm kiếm phim" type="text">
-            <div class="icon"><i class="fa fa-search"></i></div>
-            <ul class="header__search-result d-none">
-                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
-                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
-                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
-                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
-                <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
-            </ul>
-        </div>
-        <div class="header__buy-ticket-now d-none d-md-block">
-            <button class="button--red">Mua vé ngay</button>
-        </div>
-        <div class="header__login d-none d-md-flex">
-            <div class="header__login--icon">
-                <i class="fa fa-user" aria-hidden="true"></i>
+    <header class="header">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><img src="./img/web-logo.png" alt="tix-logo"
+                    style="width:60px; height:60px"></a>
+            <div class="header__film-search d-flex">
+                <input class="input" placeholder="Tìm kiếm phim" type="text">
+                <div class="icon"><i class="fa fa-search"></i></div>
+                <ul class="header__search-result d-none scroll-bar--custom">
+                    <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                    <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                    <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                    <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                    <li>Ban muon tim kiem <button class="button--red">Mua vé</button></li>
+                </ul>
             </div>
+            <button class="header__buy-now button--red d-none d-md-block">Mua vé ngay</button>
            
-            <button>Đăng nhập</button>
-        </div>
 
-
-
-
-
-
-
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
+                data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+<li class="nav-item">
+    <a href="#" class="nav-link header__login d-flex">
+        <img class="mr-1" src="./img/avatar.png" style="width:30px; height:30px" alt="avatar-user">
+        <p>Đăng nhập</p>
+    </a>
+</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Lịch chiếu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Cụm rạp</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Ứng dụng</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
         <!-- <nav class="navbar navbar-expand-md navbar-light pt-0 pb-0">
             <a class="navbar-brand" href="index.html"><img src="./img/web-logo.png" alt="logo"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse"
@@ -97,29 +112,6 @@
                 </div>
             </div>
             </div>
-            <ul class="select-show select-scroll collapse" id="selectLocation">
-                <li>Hồ Chí Minh</li>
-                <li>Hà Nội</li>
-                <li>Đà Nẵng</li>
-                <li>Hải Phòng</li>
-                <li>Biên Hòa</li>
-                <li>Nha Trang</li>
-                <li>Bình Dương</li>
-                <li>Hồ Chí Minh</li>
-                <li>Hà Nội</li>
-                <li>Đà Nẵng</li>
-                <li>Hải Phòng</li>
-                <li>Biên Hòa</li>
-                <li>Nha Trang</li>
-                <li>Bình Dương</li>
-                <li>Hồ Chí Minh</li>
-                <li>Hà Nội</li>
-                <li>Đà Nẵng</li>
-                <li>Hải Phòng</li>
-                <li>Biên Hòa</li>
-                <li>Nha Trang</li>
-                <li>Bình Dương</li>
-            </ul>
         </nav> -->
     </header>
     <!-- END HEADER -->

@@ -12,18 +12,20 @@
 }
 
 .button--red {
-   
-    @extend %transition15
-    ,%button;
+    @extend %transition15,
+    %button;
     color: getColor(white);
     background-color: getColor(red-orange);
     display: block;
+
     &:hover {
         color: getColor(red-orange);
         background-color: getColor(white);
         border-color: getColor(red-orange);
     }
 }
+
+
 
 .button__play-trailer {
     @extend %center-item;
