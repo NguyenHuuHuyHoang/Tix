@@ -38,16 +38,6 @@ $XL:   1200px;
   transform: rotate($rotage_degree);
 }
 
-@mixin text($fz, $fw, $color) {
-  font-size: $fz;
-  font-weight: $fw;
-  color: $color;
-};
-
-@mixin iconColor($color, $background-color) {
-  color: $color;
-  background-color: $background-color;
-}
 
 @mixin iconSetup($width){
   width: $width;
@@ -136,8 +126,15 @@ $XL:   1200px;
   }
 }
 
-@mixin create-square ($size) {
-  width: $size;
-  height: $size;
+@mixin size($width, $height : $width) {
+  width: $width;
+  height: $height;
 }
 
+@mixin flex($align: flex-start, $justify: flex-start, $wrap: nowrap, $dir: row) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-wrap: $wrap;
+	flex-direction: $dir;
+}

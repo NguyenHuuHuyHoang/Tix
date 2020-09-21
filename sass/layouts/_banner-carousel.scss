@@ -10,7 +10,7 @@
         bottom: 50px;
 
         li {
-            @include create-square(1vw);
+           
             border: 1px;
             border-radius: 50%;
             background-color: #CCC;
@@ -22,12 +22,12 @@
         }
     }
     .carousel-control-next-icon  {
-        @include create-square(5vw);
+        
         background-image: url('../../img/next-session.png');
     }
 
     .carousel-control-prev-icon {
-        @include create-square(5vw);
+        
         background-image: url('../../img/back-session.png');
     }
     

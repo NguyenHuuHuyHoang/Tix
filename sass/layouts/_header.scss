@@ -1,142 +1,90 @@
-// @import '../components/selectMenu';
-
-
-// %title-secondary {
-//     color: c('grey-lighter');
-// }
-
-// .header {
-
-//     background: rgba(255, 255, 255, 0.9);
-//     height: 60px;
-
-//     .navbar-brand img {
-//         width: 50px
-//     }
-
-//     .select-show {
-//         top: 100%;
-//         right: 0;
-//         min-width: 160px;
-//         margin-right: 10px;
-
-//         li {
-//             padding-left: 20px;
-//         }
-//     }
-
-//     .navbar-light .navbar-nav .nav-link {
-//         @extend %transition15;
-//         color: c('black-light');
-
-//         &:hover {
-//             color: c('red-orange')
-//         }
-//     }
-
-//     &__right {
-//         @extend %title-secondary;
-//     }
-
-
-//     &__userLogin {
-//         padding: 0 10px;
-
-
-//         &:hover {
-//             cursor: pointer;
-//         }
-
-//         i {
-//             font-size: fz(fz-3);
-//             margin-right: 10px;
-//         }
-
-//         a {
-//             @extend %title-secondary;
-//             text-decoration: none;
-//         }
-//     }
-
-//     &__locationSelecter {
-//         border: none;
-//         min-width: 150px;
-
-//         i {
-//             font-size: 20px;
-//         }
-
-//         &:hover {
-//             cursor: pointer;
-//         }
-
-
-//     }
-
-// }
-
-
-
 .header {
     position: fixed;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    top: 0;
     width: 100%;
-    min-width: 380px;
-    box-shadow: 2px 3px 5px #AAA;
-
-    &__film-search {
-        position: relative;
-        display: block;
-        margin: 0 auto;
-        padding: 0 10px;
-        flex-grow: 1;
+    height: 6rem;
+    background-color: white;
+    opacity: 0.8;
+    @extend %transition15;
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+    
+    &:hover {
+        opacity: 1;
+    }
+    
+    &__inner {
+        @include flex(center,space-between,center);
     }
 
-    &__search-result {
+    &__logo {
+        width: 5rem;
+        height: 5rem;
+
+    }
+
+    &__search {
+        @include flex(center, space-between, center);
+        position: relative;
+        width: calc(50%);
+        
+        
+        &-input {
+            display: block;
+            width: calc(100% - 2rem);
+            border: 1px solid rgba(0,0,0,.2);
+            border-radius: .5rem;
+            padding: .7rem;
+            outline: none;
+            font-family: "Roboto";
+            font-size: 1.2rem;
+            text-indent: 0.5rem;
+
+            &:placeholder-shown { 
+                text-indent: .5rem;
+            }
+        }
+
+        &-icon {
+            font-size: 1.5rem;
+            color: $primary-color;
+        }
+    }
+
+    &__search-result{
+        @include flex(flex-start,flex-start,nowrap,column);
         position: absolute;
         top: 100%;
-        z-index: 10;
-        background-color: getColor(white);
-        padding: 5px 5px 0 5px;
-        width: 98%;
-        max-height: 155px;
-        overflow-y: auto;
-
-        &>li {
-            margin-bottom: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        &>li:hover {
-            color: getColor(red-orange);
-            cursor: pointer;
-        }
-    }
-
-    &__film-search>input {
-        padding-right: 5px;
-        flex-grow: 1;
-        border: 1px solid #DDD;
-        border-right: none;
-    }
-
-    &__film-search>div {
-        color: #AAA;
+        left:0;
+        width: 100%;
         background-color: white;
-        padding-right: 5px;
-        font-size: 1.2rem;
-        border: 1px solid #DDD;
-        border-left: none;
-        transition: 0.2s;
 
-        &:hover {
-            color: getColor(red-orange);
+        &:first-child {
+            border-radius: .5rem .5rem 0 0;
         }
     }
 
+
+
+
+    &__login {
+        @include flex(center, center);
+        color: getColor(grey-lighter);
+        &:hover {
+            color:getColor(grey-lighter);
+            text-decoration: none;
+        }
+
+        &>img {
+            @include size(3rem);
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+
+        &>span {
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+    }
 
 }
