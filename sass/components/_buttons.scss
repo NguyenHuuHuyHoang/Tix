@@ -1,75 +1,91 @@
-%button {
+.button {
+    outline: none;
     border: 1px solid transparent;
-    border-radius: 4px;
-    padding: .2rem 0.4rem;
+    border-radius: .5rem;
+    background: transparent;
+    padding: .3rem 1rem;
 
-}
-
-.button--black-lighter {
-    @extend %button;
-    color: white;
-    background-color: c('black-lighter');
-}
-
-.button--red {
-    @extend %transition15,
-    %button;
-    color: getColor(white);
-    background-color: getColor(red-orange);
-    display: block;
-
-    &:hover {
-        color: getColor(red-orange);
-        background-color: getColor(white);
-        border-color: getColor(red-orange);
-    }
-}
-
-
-
-.button__play-trailer {
-    @extend %center-item;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    a {
-        @extend %transition50;
-        opacity: 0.5;
-    }
-
-    &:hover {
-        opacity: 1;
-        cursor: pointer;
-
-        a:hover {
-            opacity: 1;
+    &--primary {
+        @extend %transition15;
+        background-color: $primary-color;
+        color: getColor(white);
+        
+        &:hover {
+            background-color: getColor(white);
+            color: $active-color;
+            border: 1px solid currentColor;
         }
     }
 }
 
-.button__play-trailer--overlay {
-    @extend %transition50,
-    %center-item;
-    opacity: 0;
-    background: linear-gradient(to top, #000, transparent 100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
 
-    a {
-        @extend %transition50;
-        opacity: 0.5;
-    }
 
-    &:hover {
-        opacity: 1;
-        cursor: pointer;
+// .button--black-lighter {
+//     @extend %button;
+//     color: white;
+//     background-color: c('black-lighter');
+// }
 
-        a:hover {
-            opacity: 1;
-        }
-    }
-}
+// .button--red {
+//     @extend %transition15,
+//     %button;
+//     color: getColor(white);
+//     background-color: getColor(red-orange);
+//     display: block;
+
+//     &:hover {
+//         color: getColor(red-orange);
+//         background-color: getColor(white);
+//         border-color: getColor(red-orange);
+//     }
+// }
+
+
+
+
+// .button__play-trailer {
+//     @extend %center-item;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+
+//     a {
+//         @extend %transition50;
+//         opacity: 0.5;
+//     }
+
+//     &:hover {
+//         opacity: 1;
+//         cursor: pointer;
+
+//         a:hover {
+//             opacity: 1;
+//         }
+//     }
+// }
+
+// .button__play-trailer--overlay {
+//     @extend %transition50,
+//     %center-item;
+//     opacity: 0;
+//     background: linear-gradient(to top, #000, transparent 100%);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     bottom: 0;
+
+//     a {
+//         @extend %transition50;
+//         opacity: 0.5;
+//     }
+
+//     &:hover {
+//         opacity: 1;
+//         cursor: pointer;
+
+//         a:hover {
+//             opacity: 1;
+//         }
+//     }
+// }

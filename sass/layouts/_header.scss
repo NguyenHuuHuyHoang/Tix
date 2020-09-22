@@ -22,53 +22,142 @@
 
     }
 
+    
     &__search {
         @include flex(center, space-between, center);
         position: relative;
-        width: calc(50%);
-        
+        width: auto;
+
+
+        @include responsive(mobile) {
+            width: calc(100% - 6rem);
+        }
         
         &-input {
+            @extend %transition15;
             display: block;
-            width: calc(100% - 2rem);
+            width: calc(100%);
             border: 1px solid rgba(0,0,0,.2);
             border-radius: .5rem;
-            padding: .7rem;
+            padding: .7rem 3rem .7rem .7rem;
             outline: none;
             font-family: "Roboto";
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             text-indent: 0.5rem;
-
+            box-sizing: content-box;
+            
+            
             &:placeholder-shown { 
                 text-indent: .5rem;
             }
-        }
 
+            &:focus {
+                border-color: $active-color;
+                
+                & + .header__result {
+                visibility: visible;
+            }
+
+            }
+
+
+            
+        }
+        
         &-icon {
-            font-size: 1.5rem;
-            color: $primary-color;
+            @extend %transition15;
+            position: absolute;
+            top:50%;
+            right: 0;
+            transform: translateY(-50%);
+            font-size: 1.9rem;
+            padding: 0.8rem;
+            color: $inactive-color;
+            cursor: pointer;
+            
+            &:hover {
+                color: $primary-color;
+            }
         }
     }
 
-    &__search-result{
+    &__result{
         @include flex(flex-start,flex-start,nowrap,column);
+        @extend %transition15;
         position: absolute;
+        width: 100%;
         top: 100%;
         left:0;
-        width: 100%;
-        background-color: white;
+        margin-top: .5rem;
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+        text-transform: capitalize;
+        overflow: hidden;
+        border: 1px solid $inactive-color;
+        border-radius: 0.5rem;
+        visibility: hidden;
 
-        &:first-child {
-            border-radius: .5rem .5rem 0 0;
+        
+        &-nav {
+            width: 100%;
+            font-size: 1.4rem;
+            font-weight: 500;
+            padding: .3rem 1rem 0 1rem;
+            background-color: getColor(white);
+            cursor: pointer;
+            
+            &:first-child {
+                font-weight: 500;
+                font-size: 1.6rem;
+                color:$primary-color;
+
+                @include responsive(tablet) {
+                    display: none;
+                }
+            }
+
+            &:hover {
+                background-color: $active-color;
+                color: getColor(white);
+            }
         }
+        
+        &-item {
+            @include flex(center,space-between);
+            width: 100%;
+            padding: .3rem 1rem 0 1rem;
+            background-color: getColor(white);
+            font-weight: 300;
+
+            &>a {
+                @extend %transition15;
+                display: inline-block;
+                width: calc(100% - 8rem);
+                font-size: 1.4rem;
+
+                &:hover {
+                    color: $active-color;
+                }
+            }
+
+            &>button {
+                font-size: 1.4rem;
+                margin-bottom: 0.2rem;
+            }
+        }
+
     }
-
-
-
-
+    
+    
+    
+    
     &__login {
         @include flex(center, center);
         color: getColor(grey-lighter);
+
+        @include responsive(mobile) {
+            display: none;
+        }
+
         &:hover {
             color:getColor(grey-lighter);
             text-decoration: none;

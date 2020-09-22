@@ -4,6 +4,10 @@ $SM:    576px;
 $MD:    768px;  
 $LG:    992px; 
 $XL:   1200px;
+
+$mobile: 46.1875em;
+$tablet: 46.25em;
+$desktop: 64em;
      
 
 // media queries
@@ -24,6 +28,16 @@ $XL:   1200px;
   @else if $canvas == XL {
    @media only screen and (max-width: $XL) { @content; } 
   }
+  @else if $canvas == mobile {
+    @media only screen and (max-width: $mobile) { @content; } 
+   }
+   @else if $canvas == tablet {
+    @media only screen and (min-width: $tablet) { @content; } 
+   }
+   @else if $canvas == desktop {
+    @media only screen and (min-width: $desktop) { @content; } 
+   }
+  
 }
 
 

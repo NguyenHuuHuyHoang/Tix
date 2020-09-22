@@ -1,24 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.button__play-trailer a, .button__play-trailer--overlay, .button__play-trailer--overlay a {
-  -webkit-transition: all 0.5s ease-out 0s;
-  transition: all 0.5s ease-out 0s;
-}
-
-.button--red, .header {
+.button--primary, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-}
-
-.button__play-trailer, .button__play-trailer--overlay {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media only screen and (max-width: 992px) {
@@ -9989,70 +9972,23 @@ body {
   text-indent: 5px;
 }
 
-.button--black-lighter, .button--red {
+.button {
+  outline: none;
   border: 1px solid transparent;
-  border-radius: 4px;
-  padding: .2rem 0.4rem;
+  border-radius: .5rem;
+  background: transparent;
+  padding: .3rem 1rem;
 }
 
-.button--black-lighter {
-  color: white;
-  background-color: c("black-lighter");
-}
-
-.button--red {
-  color: #FFF;
+.button--primary {
   background-color: #FA5238;
-  display: block;
+  color: #FFF;
 }
 
-.button--red:hover {
-  color: #FA5238;
+.button--primary:hover {
   background-color: #FFF;
-  border-color: #FA5238;
-}
-
-.button__play-trailer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.button__play-trailer a {
-  opacity: 0.5;
-}
-
-.button__play-trailer:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.button__play-trailer:hover a:hover {
-  opacity: 1;
-}
-
-.button__play-trailer--overlay {
-  opacity: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
-  background: linear-gradient(to top, #000, transparent 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.button__play-trailer--overlay a {
-  opacity: 0.5;
-}
-
-.button__play-trailer--overlay:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.button__play-trailer--overlay:hover a:hover {
-  opacity: 1;
+  color: #FA5238;
+  border: 1px solid currentColor;
 }
 
 .scroll-bar--custom {
@@ -10171,31 +10107,58 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   position: relative;
-  width: calc(50%);
+  width: auto;
+}
+
+@media only screen and (max-width: 46.1875em) {
+  .header__search {
+    width: calc(100% - 6rem);
+  }
 }
 
 .header__search-input {
   display: block;
-  width: calc(100% - 2rem);
+  width: calc(100%);
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: .5rem;
-  padding: .7rem;
+  padding: .7rem 3rem .7rem .7rem;
   outline: none;
   font-family: "Roboto";
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-indent: 0.5rem;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 .header__search-input:placeholder-shown {
   text-indent: .5rem;
 }
 
+.header__search-input:focus {
+  border-color: #FA5238;
+}
+
+.header__search-input:focus + .header__result {
+  visibility: visible;
+}
+
 .header__search-icon {
-  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 1.9rem;
+  padding: 0.8rem;
+  color: #949494;
+  cursor: pointer;
+}
+
+.header__search-icon:hover {
   color: #FA5238;
 }
 
-.header__search-result {
+.header__result {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10212,14 +10175,80 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   position: absolute;
+  width: 100%;
   top: 100%;
   left: 0;
-  width: 100%;
-  background-color: white;
+  margin-top: .5rem;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+  overflow: hidden;
+  border: 1px solid #949494;
+  border-radius: 0.5rem;
+  visibility: hidden;
 }
 
-.header__search-result:first-child {
-  border-radius: .5rem .5rem 0 0;
+.header__result-nav {
+  width: 100%;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: .3rem 1rem 0 1rem;
+  background-color: #FFF;
+  cursor: pointer;
+}
+
+.header__result-nav:first-child {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #FA5238;
+}
+
+@media only screen and (min-width: 46.25em) {
+  .header__result-nav:first-child {
+    display: none;
+  }
+}
+
+.header__result-nav:hover {
+  background-color: #FA5238;
+  color: #FFF;
+}
+
+.header__result-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  padding: .3rem 1rem 0 1rem;
+  background-color: #FFF;
+  font-weight: 300;
+}
+
+.header__result-item > a {
+  display: inline-block;
+  width: calc(100% - 8rem);
+  font-size: 1.4rem;
+}
+
+.header__result-item > a:hover {
+  color: #FA5238;
+}
+
+.header__result-item > button {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
 }
 
 .header__login {
@@ -10241,6 +10270,12 @@ body {
   color: #9b9b9b;
 }
 
+@media only screen and (max-width: 46.1875em) {
+  .header__login {
+    display: none;
+  }
+}
+
 .header__login:hover {
   color: #9b9b9b;
   text-decoration: none;
@@ -10259,70 +10294,23 @@ body {
   text-transform: capitalize;
 }
 
-.button--black-lighter, .button--red {
+.button {
+  outline: none;
   border: 1px solid transparent;
-  border-radius: 4px;
-  padding: .2rem 0.4rem;
+  border-radius: .5rem;
+  background: transparent;
+  padding: .3rem 1rem;
 }
 
-.button--black-lighter {
-  color: white;
-  background-color: c("black-lighter");
-}
-
-.button--red {
-  color: #FFF;
+.button--primary {
   background-color: #FA5238;
-  display: block;
+  color: #FFF;
 }
 
-.button--red:hover {
-  color: #FA5238;
+.button--primary:hover {
   background-color: #FFF;
-  border-color: #FA5238;
-}
-
-.button__play-trailer {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-}
-
-.button__play-trailer a {
-  opacity: 0.5;
-}
-
-.button__play-trailer:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.button__play-trailer:hover a:hover {
-  opacity: 1;
-}
-
-.button__play-trailer--overlay {
-  opacity: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(transparent));
-  background: linear-gradient(to top, #000, transparent 100%);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-
-.button__play-trailer--overlay a {
-  opacity: 0.5;
-}
-
-.button__play-trailer--overlay:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.button__play-trailer--overlay:hover a:hover {
-  opacity: 1;
+  color: #FA5238;
+  border: 1px solid currentColor;
 }
 
 .banner-carousel {
