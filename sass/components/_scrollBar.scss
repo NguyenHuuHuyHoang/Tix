@@ -1,4 +1,8 @@
 .scroll-bar--custom {
+    scrollbar-width: thin;
+    scrollbar-color: red;
+    background-color: white;
+
     &::-webkit-scrollbar {
         width: 5px;
     }
@@ -17,6 +21,6 @@
         display: none;
     }
 
-    scrollbar-color: black;
-    scrollbar-width: thin;
+    
+    
 }

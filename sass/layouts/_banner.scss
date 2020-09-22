@@ -1,0 +1,90 @@
+// .banner-carousel {
+
+//     position: relative;
+//     z-index: -1;
+
+//     .carousel-indicators {
+
+//         bottom: 50px;
+
+//         li {
+
+//             border: 1px;
+//             border-radius: 50%;
+//             background-color: #CCC;
+//             opacity: 1;
+
+//         }
+//         .active {
+//             background-color: c('red-orange');
+//         }
+//     }
+//     .carousel-control-next-icon  {
+
+//         background-image: url('../../img/next-session.png');
+//     }
+
+//     .carousel-control-prev-icon {
+
+//         background-image: url('../../img/back-session.png');
+//     }
+
+
+// }
+
+.banner {
+    position: relative;
+    margin-top: 6rem;
+    
+    &__carousel {
+        @include responsive(mobile) {
+            display: none;
+        }
+
+        &.slick-dots li.slick-active button:before {
+            color: $active-color;
+        }
+        &-item>img {
+            width: 100%;
+        }
+    }
+    
+    &__prev,&__next {
+        @extend %transition15;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        width: 4rem;
+        opacity: 0.4;
+
+        @include responsive(mobile) {
+            display: none;
+        }
+        
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__prev {
+        left: 1.5rem;
+    }
+
+    &__next {
+        right: 1.5rem;
+    }
+
+    &__tool {
+    @include flex(center, space-between);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 94rem;
+    height: 8rem;
+    background-color: getColor(white);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+    border-radius: .6rem;
+}
+
+
+}
