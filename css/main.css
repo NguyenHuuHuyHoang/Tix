@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.banner__btn-play {
-  -webkit-transition: all 0.5s ease-out 0s;
-  transition: all 0.5s ease-out 0s;
-}
-
-.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .tool-select, .tool__selected {
+.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__btn-play, .tool-select, .tool__selected {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
@@ -10070,12 +10065,85 @@ body {
   right: 1.5rem;
 }
 
+.card {
+  width: calc(88rem / 4);
+  height: 31.8rem;
+  position: relative;
+  -webkit-transition: .5s all ease-out;
+  transition: .5s all ease-out;
+  -webkit-transform: rotateY(0) scale(1);
+          transform: rotateY(0) scale(1);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card__hover-area:hover {
+  overflow: hidden;
+}
+
+.card__hover-area:hover .card {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  -webkit-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.16);
+}
+
+.card__hover-area:hover .card-back {
+  opacity: 1;
+  -webkit-transition-delay: .17s;
+          transition-delay: .17s;
+  -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.card-front {
+  -webkit-transition: .4 all linear;
+  transition: .4 all linear;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-front > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-transition-delay: .17s;
+          transition-delay: .17s;
+  padding: 2em;
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
 .card__title {
   text-transform: capitalize;
 }
 
 .card__info {
   text-transform: capitalize;
+  font-size: 1.4rem;
+  color: #949494;
 }
 
 .card__rating {
@@ -10098,6 +10166,9 @@ body {
 
 .card__rating p {
   margin-bottom: 0;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .card__rating > div {
@@ -10116,6 +10187,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-left: 1rem;
 }
 
 .card__rating-icon {
@@ -10127,6 +10199,11 @@ body {
   padding: 1rem 0;
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+.card__btn-play {
+  margin-top: auto;
+  margin-bottom: 1rem;
 }
 
 .header {
@@ -10439,11 +10516,11 @@ body {
 }
 
 .banner__carousel:hover + .banner__btn-play {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .banner__btn-play {
-  opacity: 0.5;
+  opacity: 0;
 }
 
 .banner__btn-play:hover {
@@ -10623,11 +10700,18 @@ body {
 
 .homeFilms {
   margin-top: 6rem;
+  display: none;
+}
+
+@media only screen and (min-width: 64em) {
+  .homeFilms {
+    display: block;
+  }
 }
 
 .homeFilms__title {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 500;
   text-align: center;
   margin-bottom: 2rem;
@@ -10659,7 +10743,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-bottom: 1rem;
+  margin-bottom: 1.8rem;
 }
 
 .homeFilms__card {

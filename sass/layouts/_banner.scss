@@ -2,6 +2,8 @@
     position: relative;
     margin-top: 6rem;
 
+    
+
     @include responsive(mobile) {
         display: none;
     }
@@ -16,15 +18,16 @@
             width: 100%;
         }
 
-        &:hover+.banner__btn-play {
-            opacity: 1;
+        &:hover + .banner__btn-play {
+            opacity: 0.5;
         }
     }
 
     &__btn-play {
-        @extend %transition50;
+        @extend %transition15;
         @extend %center-vertically;
-        opacity: 0.5;
+        opacity: 0;
+        
 
         &:hover {
             opacity: 1;
