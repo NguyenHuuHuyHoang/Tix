@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__btn-play, .tool-select, .tool__selected {
+.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__btn-play, .tool-select, .tool__selected, .homeCinemaComplex__cinemas-item, .homeCinemaComplex .cinemas-list__item {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
@@ -9961,6 +9961,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+}
+
 .icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10204,6 +10211,32 @@ body {
 .card__btn-play {
   margin-top: auto;
   margin-bottom: 1rem;
+}
+
+.border-separated--right:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-right: 1px solid #fff;
+  border-right-color: white;
+  border-right-color: rgba(238, 238, 238, 0.88);
+}
+
+.border-separated--bottom:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: calc(100% - 40px);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-bottom: 1px solid #fff;
+  border-bottom-color: white;
+  border-color: rgba(238, 238, 238, 0.88);
 }
 
 .header {
@@ -10625,19 +10658,6 @@ body {
   color: #FA5238;
 }
 
-.tool-select:after {
-  content: '';
-  position: absolute;
-  right: 0;
-  height: 50%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  border-right: 1px solid #fff;
-  border-right-color: white;
-  border-right-color: rgba(238, 238, 238, 0.88);
-}
-
 .tool__selected {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10698,6 +10718,10 @@ body {
   min-width: calc(94rem * .3);
 }
 
+.tool__btn {
+  margin-left: 1rem;
+}
+
 .homeFilms {
   margin-top: 6rem;
   display: none;
@@ -10710,10 +10734,6 @@ body {
 }
 
 .homeFilms__title {
-  text-transform: uppercase;
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -10759,5 +10779,156 @@ body {
 .homeFilms__card-front > img {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.homeCinemaComplex {
+  margin-top: 0.3rem;
+}
+
+.homeCinemaComplex__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0 auto;
+  margin-top: 3rem;
+  max-width: 94rem;
+  border: 1px solid rgba(238, 238, 238, 0.88);
+  border-radius: 1rem;
+}
+
+.homeCinemaComplex__cinemas {
+  width: 9rem;
+  border-right: 1px solid rgba(238, 238, 238, 0.88);
+}
+
+.homeCinemaComplex__cinemas-item {
+  position: relative;
+  width: 100%;
+  padding: 2rem;
+  cursor: pointer;
+  opacity: .5;
+}
+
+.homeCinemaComplex__cinemas-item > img {
+  width: 5rem;
+  height: 5rem;
+}
+
+.homeCinemaComplex__cinemas-item:hover, .homeCinemaComplex__cinemas-item.active {
+  opacity: 1;
+}
+
+.homeCinemaComplex .cinemas-list {
+  width: 28.2rem;
+  border-right: 1px solid rgba(238, 238, 238, 0.88);
+}
+
+.homeCinemaComplex .cinemas-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  padding: 2rem;
+  cursor: pointer;
+  opacity: .5;
+}
+
+.homeCinemaComplex .cinemas-list__item.active, .homeCinemaComplex .cinemas-list__item:hover {
+  opacity: 1;
+}
+
+.homeCinemaComplex .cinemas-list__item-left {
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.homeCinemaComplex .cinemas-list__item-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: calc(100% - 6rem);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.homeCinemaComplex .cinemas-list__item-right h4, .homeCinemaComplex .cinemas-list__item-right p, .homeCinemaComplex .cinemas-list__item-right h5 {
+  margin-bottom: 0.2rem;
+}
+
+.homeCinemaComplex .cinemas-list__item-right p {
+  display: inline;
+  text-overflow: ellipsis;
+  font-size: 1.6rem;
+}
+
+.homeCinemaComplex .cinemas-list__item-right h5 {
+  font-size: 1.3rem;
+  color: #FA5238;
+  cursor: pointer;
+}
+
+.homeCinemaComplex .bhd span {
+  color: #8bc541;
+}
+
+.homeCinemaComplex .lotte span {
+  color: #ca4137;
+}
+
+.homeCinemaComplex .cinestar span {
+  color: #df0d7a;
+}
+
+.homeCinemaComplex .galaxy span {
+  color: #f60;
+}
+
+.homeCinemaComplex .mega span {
+  color: #e5a813;
+}
+
+.homeCinemaComplex .dongda span {
+  color: #9c9c9c;
+}
+
+.homeCinemaComplex .dcine span {
+  color: #000;
 }
 /*# sourceMappingURL=main.css.map */

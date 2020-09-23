@@ -116,7 +116,7 @@
         />
         <div class="tool">
           <div class="tool-item">
-            <div class="tool-select">
+            <div class="tool-select border-separated--right ">
               phim
               <div
                 class="tool__selected-movie tool__selected scroll-bar--custom"
@@ -136,7 +136,7 @@
             </div>
           </div>
           <div class="tool-item">
-            <div class="tool-select tool__selected-theater">
+            <div class="tool-select border-separated--right tool__selected-theater">
               rạp
               <div
                 class="tool__selected-theater tool__selected scroll-bar--custom"
@@ -146,7 +146,7 @@
             </div>
           </div>
           <div class="tool-item">
-            <div class="tool-select tool__selected-date">
+            <div class="tool-select border-separated--right tool__selected-date">
               ngày xem
 
               <div
@@ -161,7 +161,7 @@
             </div>
           </div>
           <div class="tool-item">
-            <div class="tool-select tool__selected-session">
+            <div class="tool-select border-separated--right tool__selected-session">
               suất chiếu
               <div
                 class="tool__selected-session tool__selected scroll-bar--custom"
@@ -173,7 +173,7 @@
             </div>
           </div>
           <div class="tool-item">
-            <button class="button button--grey">mua vé ngay</button>
+            <button class="button button--grey tool__btn">mua vé ngay</button>
           </div>
         </div>
       </div>
@@ -182,7 +182,7 @@
 
     <section class="homeFilms">
       <div class="container">
-        <h2 class="homeFilms__title">lịch chiếu</h2>
+        <h2 class="homeFilms__title title">lịch chiếu</h2>
         <div class="homeFilms__inner">
           <img
           class="carousel carousel__btn--prev homeFilms__prev"
@@ -601,11 +601,48 @@
     </section>
 
     <section class="homeCinemaComplex">
-      <h2 class="homeCinemaComplex__title">
+      <h2 class="title">
         cụm rạp
       </h2>
       <div class="homeCinemaComplex__inner">
-          
+          <div class="homeCinemaComplex__cinemas">
+              <div class="homeCinemaComplex__cinemas-item border-separated--bottom active">
+                <img src="./img/group-logo-cinemas/bhd.png" alt="dong-da-cinema">
+              </div>
+              <div class="homeCinemaComplex__cinemas-item border-separated--bottom">
+                <img src="./img/group-logo-cinemas/galaxycine.png" alt="dong-da-cinema">
+              </div>
+              <div class="homeCinemaComplex__cinemas-item border-separated--bottom">
+                <img src="./img/group-logo-cinemas/cinestar.png" alt="dong-da-cinema">
+              </div>
+              <div class="homeCinemaComplex__cinemas-item border-separated--bottom">
+                <img src="./img/group-logo-cinemas/dongdacinema.png" alt="dong-da-cinema">
+              </div>
+              <div class="homeCinemaComplex__cinemas-item border-separated--bottom">
+                <img src="./img/group-logo-cinemas/megags.png" alt="dong-da-cinema">
+              </div>
+              <div class="homeCinemaComplex__cinemas-item border-separated--bottom">
+                <img src="./img/group-logo-cinemas/dcine.png" alt="dong-da-cinema">
+              </div>
+              <div class="homeCinemaComplex__cinemas-item">
+                <img src="./img/group-logo-cinemas/lotte.png" alt="dong-da-cinema">
+              </div>
+          </div>
+          <div class="cinemas-list">
+              <div class="cinemas-list__item border-separated--bottom active">
+                  <div class="cinemas-list__item-left">
+                    <img src="./img/bhd-star-bitexco-15379552241200.jpg" alt="bhd-bitexco" style="width: 50px; height: 50px;">
+                  </div>
+                  <div class="cinemas-list__item-right bhd">
+                      <h4><span>BHD Star</span> - Bitexco</h4>
+                      <p>L3-Bitexco Icon 68, 2 Hải Triều, Q.1</p>
+                      <h5>[chi tiết]</h5>
+                  </div>
+              </div>
+          </div>
+          <div class="cinemas-movies">
+
+          </div>
       </div>
     </section>
     <script src="./js/jquery-3.3.1.slim.min.js"></script>

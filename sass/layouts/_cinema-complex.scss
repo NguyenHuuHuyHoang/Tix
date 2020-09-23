@@ -1,0 +1,112 @@
+.homeCinemaComplex {
+    margin-top: 0.3rem;
+
+    &__inner {
+        @include flex();
+        margin: 0 auto;
+        margin-top: 3rem;
+        max-width: 94rem;
+        border: 1px solid rgba(238, 238, 238, .88);
+        border-radius: 1rem;
+    }
+
+    &__cinemas {
+        width: 9rem;
+        border-right: 1px solid rgba(238, 238, 238, .88);
+
+        &-item {
+            @extend %transition15;
+            position: relative;
+            width: 100%;
+            padding: 2rem;
+            cursor: pointer;
+            opacity: .5;
+
+            &>img {
+                @include size(5rem);
+                
+                
+            }
+
+            &:hover,&.active {
+                opacity: 1;
+            }
+
+        }
+    }
+
+    .cinemas-list {
+        width: 28.2rem;
+        border-right: 1px solid rgba(238, 238, 238, .88);
+
+        &__item {
+            @include flex(stretch, center);
+            @extend %transition15;
+            position: relative;
+            padding: 2rem;
+            cursor: pointer;
+            opacity: .5;
+
+            &.active, &:hover  {
+                opacity: 1;
+            }
+            
+
+            &-left {
+                width: 5rem;
+                margin-right: 1rem;
+            }
+            &-right{
+                @include flex(flex-start, flex-start, nowrap, column);
+                width: calc(100% - 6rem);
+                white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                
+                h4,p,h5 {
+                    margin-bottom: 0.2rem;
+                }
+                p {
+                    display: inline;
+                    text-overflow: ellipsis;
+                    font-size: 1.6rem;
+                    
+                }
+                h5 {
+                    font-size: 1.3rem;
+                    color: $active-color;
+                    cursor: pointer;
+                }
+   
+            }
+        }
+    }
+
+    .bhd span {
+        color: $bhd-color;
+    }
+
+    .lotte span {
+        color: $lotte-color;
+    }
+
+    .cinestar span {
+        color: $cinestar-color;
+    }
+
+    .galaxy span {
+        color: $galaxy-color; 
+    }
+
+    .mega span {
+        color: $mega-color;
+    }
+
+    .dongda span {
+        color: $dongda-color;
+    }
+    .dcine span {
+        color: $dcine-color;
+    }
+
+}

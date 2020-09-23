@@ -61,17 +61,6 @@
             color: $active-color;
         }
 
-        &:after {
-            content: '';
-            position: absolute;
-            right: 0;
-            height: 50%;
-            top: 50%;
-            transform: translateY(-50%);
-            border-right: 1px solid #fff;
-            border-right-color: rgb(255, 255, 255);
-            border-right-color: rgba(238, 238, 238, .88);
-        }
     }
     &__selected {
         @include flex(flex-start, center, nowrap, column);
@@ -112,11 +101,15 @@
                 color: $inactive-color;
                 font-size: 1.2rem;
             }
+
         }
     
         &-movie {
             min-width: calc(94rem * .3);
         }
     
+    }
+    &__btn {
+        margin-left: 1rem;
     }
 }
