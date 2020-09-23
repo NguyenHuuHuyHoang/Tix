@@ -2,6 +2,7 @@
     scrollbar-width: thin;
     scrollbar-color: red;
     background-color: white;
+    overflow-y:scroll;
 
     &::-webkit-scrollbar {
         width: 5px;

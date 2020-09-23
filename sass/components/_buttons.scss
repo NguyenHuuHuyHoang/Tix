@@ -15,6 +15,18 @@
             border: 1px solid currentColor;
         }
     }
+
+    &--grey {
+        @extend %transition15;
+        background-color: getColor(black-lighter);
+        color: getColor(white);
+        
+        &:hover {
+            background-color: getColor(white);
+            color: getColor(black-lighter);
+            border: 1px solid currentColor;
+        }
+    }
 }
 
 

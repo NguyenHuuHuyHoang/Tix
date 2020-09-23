@@ -35,7 +35,7 @@
 .banner {
     position: relative;
     margin-top: 6rem;
-    
+
     &__carousel {
         @include responsive(mobile) {
             display: none;
@@ -44,12 +44,14 @@
         &.slick-dots li.slick-active button:before {
             color: $active-color;
         }
+
         &-item>img {
             width: 100%;
         }
     }
-    
-    &__prev,&__next {
+
+    &__prev,
+    &__next {
         @extend %transition15;
         position: absolute;
         top: 50%;
@@ -60,11 +62,12 @@
         @include responsive(mobile) {
             display: none;
         }
-        
+
         &:hover {
             opacity: 1;
         }
     }
+
     &__prev {
         left: 1.5rem;
     }
@@ -74,17 +77,95 @@
     }
 
     &__tool {
-    @include flex(center, space-between);
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 94rem;
-    height: 8rem;
-    background-color: getColor(white);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
-    border-radius: .6rem;
-}
+        @include flex(center, space-between);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 94rem;
+        height: 8rem;
+        background-color: getColor(white);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+        border-radius: .6rem;
 
+        &-item {
+            position: relative;
+            width: calc(70% / 4);
+            background-image: url(../../img/dropdown-icon.png);
+            background-repeat: no-repeat;
+            background-position: calc(100% - 8px);
 
+            &:first-child {
+                width: 30%;
+            }
+
+            &:last-child {
+                background: none;
+
+                &>button {
+                    text-transform: uppercase;
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    padding: 1rem 2rem;
+                }
+            }
+        }
+
+        &-select {
+            @include flex(center, space-between);
+            @extend %transition15;
+            width: 100%;
+            text-transform: capitalize;
+            font-size: 1.6rem;
+            font-weight: 500;
+            padding: 1rem;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-right: 20px;
+            cursor: pointer;
+
+            &:hover {
+                color: $active-color;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                right: 0;
+                height: 50%;
+                top: 50%;
+                transform: translateY(-50%);
+                border-right: 1px solid #fff;
+                border-right-color: rgb(255, 255, 255);
+                border-right-color: rgba(238, 238, 238, .88);
+            }
+        }
+    }
+
+    .tool__selected {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0 1rem;
+        border-radius: 0.5rem;
+        background-color: #fff;
+        width: 100%;
+        min-width: calc(94rem * 0.3);
+        max-height: 19.5rem;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+        
+        &-item{
+            color: black;
+            margin-top: .5rem;
+            padding: 0.5rem;
+
+            &:hover {
+                border-radius: inherit;
+                background: getColor(blue-sky);
+                color: getColor(white);
+
+            }
+        }
+    }
 }

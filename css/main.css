@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-.button--primary, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__prev, .banner__next {
+.button--primary, .button--grey, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__prev, .banner__next, .banner__tool-select {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
@@ -9990,10 +9990,22 @@ body {
   border: 1px solid currentColor;
 }
 
+.button--grey {
+  background-color: #4A4A4A;
+  color: #FFF;
+}
+
+.button--grey:hover {
+  background-color: #FFF;
+  color: #4A4A4A;
+  border: 1px solid currentColor;
+}
+
 .scroll-bar--custom {
   scrollbar-width: thin;
   scrollbar-color: red;
   background-color: white;
+  overflow-y: scroll;
 }
 
 .scroll-bar--custom::-webkit-scrollbar {
@@ -10033,6 +10045,7 @@ body {
   scrollbar-width: thin;
   scrollbar-color: red;
   background-color: white;
+  overflow-y: scroll;
 }
 
 .scroll-bar--custom::-webkit-scrollbar {
@@ -10415,6 +10428,100 @@ body {
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   border-radius: .6rem;
+}
+
+.banner__tool-item {
+  position: relative;
+  width: calc(70% / 4);
+  background-image: url(../../img/dropdown-icon.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px);
+}
+
+.banner__tool-item:first-child {
+  width: 30%;
+}
+
+.banner__tool-item:last-child {
+  background: none;
+}
+
+.banner__tool-item:last-child > button {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+}
+
+.banner__tool-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.banner__tool-select:hover {
+  color: #FA5238;
+}
+
+.banner__tool-select:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-right: 1px solid #fff;
+  border-right-color: white;
+  border-right-color: rgba(238, 238, 238, 0.88);
+}
+
+.banner .tool__selected {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0 1rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  width: 100%;
+  min-width: calc(94rem * 0.3);
+  max-height: 19.5rem;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+
+.banner .tool__selected-item {
+  color: black;
+  margin-top: .5rem;
+  padding: 0.5rem;
+}
+
+.banner .tool__selected-item:hover {
+  border-radius: inherit;
+  background: #60c5ef;
+  color: #FFF;
 }
 
 .tool-buy-ticket {
