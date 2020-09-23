@@ -1,0 +1,20 @@
+.carousel { 
+    @extend %transition15;
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        width: 4rem;
+        opacity: 0.4;
+
+        &:hover {
+            opacity: 1;
+        }
+
+    &__btn--prev {
+        left: 1.5rem;
+    }
+
+    &__btn--next {
+        right: 1.5rem;
+    }
+}

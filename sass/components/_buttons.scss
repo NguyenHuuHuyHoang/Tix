@@ -3,6 +3,7 @@
     border: 1px solid transparent;
     border-radius: .5rem;
     background: transparent;
+    text-transform: uppercase;
 
     &--primary {
         @extend %transition15;
@@ -24,6 +25,18 @@
         &:hover {
             background-color: getColor(white);
             color: getColor(black-lighter);
+            border: 1px solid currentColor;
+        }
+    }
+
+    &--green {
+        @extend %transition15;
+        background-color: getColor(green-dark);
+        color: getColor(white);
+        
+        &:hover {
+            background-color: getColor(white);
+            color: getColor(green-dark);
             border: 1px solid currentColor;
         }
     }

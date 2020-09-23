@@ -99,100 +99,186 @@
             />
           </a>
         </div>
+        <button class="button banner__btn-play">
+          <img src="./img/play-video.png" alt="play-button" />
+        </button>
         <img
-          class="banner__prev"
+          class="carousel carousel__btn--prev banner__prev"
           src="./img/back-session.png"
           alt=""
           srcset=""
         />
         <img
-          class="banner__next"
+          class="carousel carousel__btn--next banner__next"
           src="./img/next-session.png"
           alt=""
           srcset=""
         />
-        <div class="banner__tool">
-          <div class="banner__tool-item">
-            <div class="banner__tool-select">
-                phim
-                <div class="tool__selected-movie tool__selected scroll-bar--custom">
-                  <div class="tool__selected-item">tenet</div>
-                  <div class="tool__selected-item">ròm</div>
-                  <div class="tool__selected-item">vì sao đưa bạn tới - jungle beat</div>
-                  <div class="tool__selected-item">bà tôi là công chúa - oh! my gran</div>
-                  <div class="tool__selected-item">bẫy trăng máu - hunter's moon</div>
-                  <div class="tool__selected-item">vì sao đưa bạn tới - jungle beat</div>
-                  <div class="tool__selected-item">bà tôi là công chúa - oh! my gran</div>
-                  <div class="tool__selected-item">bẫy trăng máu - hunter's moon</div>
+        <div class="tool">
+          <div class="tool-item">
+            <div class="tool-select">
+              phim
+              <div
+                class="tool__selected-movie tool__selected scroll-bar--custom"
+              >
+                <div class="tool__selected-item">tenet</div>
+                <div class="tool__selected-item">ròm</div>
+                <div class="tool__selected-item">
+                  vì sao đưa bạn tới - jungle beat
                 </div>
+                <div class="tool__selected-item">
+                  bà tôi là công chúa - oh! my gran
+                </div>
+                <div class="tool__selected-item">
+                  bẫy trăng máu - hunter's moon
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="banner__tool-item">
-            <div class="banner__tool-select tool__selected-theater">rạp</div>
-          </div>
-          <div class="banner__tool-item">
-            <div class="banner__tool-select tool__selected-date">ngày xem</div>
-          </div>
-          <div class="banner__tool-item">
-            <div class="banner__tool-select tool__selected-session">
-              xuất chiếu
-
+          <div class="tool-item">
+            <div class="tool-select tool__selected-theater">
+              rạp
+              <div
+                class="tool__selected-theater tool__selected scroll-bar--custom"
+              >
+                <div class="tool__selected-item">vui lòng chọn phim</div>
+              </div>
             </div>
           </div>
-          <div class="banner__tool-item">
+          <div class="tool-item">
+            <div class="tool-select tool__selected-date">
+              ngày xem
+
+              <div
+                class="tool__selected-date tool__selected scroll-bar--custom"
+              >
+                <div class="tool__selected-item">vui lòng chọn phim và rạp</div>
+                <div class="tool__selected-item">
+                  <p>thứ sáu</p>
+                  <span>23-09-2020 </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tool-item">
+            <div class="tool-select tool__selected-session">
+              suất chiếu
+              <div
+                class="tool__selected-session tool__selected scroll-bar--custom"
+              >
+                <div class="tool__selected-item">
+                  vui lòng chọn phim, rạp và ngày xem
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tool-item">
             <button class="button button--grey">mua vé ngay</button>
           </div>
-
         </div>
       </div>
-      <!--
-        <div class="tool-buy-ticket__secondary-section border-right--separated">
-          <div
-            class="select-menu"
-            data-toggle="collapse"
-            data-target="#select-watching-day"
-          >
-            <span> Ngày xem</span>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <ul class="select-show collapse" id="select-watching-day">
-              <li>Cá Sấu Tử Thần - Black Water: Abyss - (C18)</li>
-              <li>
-                Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16)
-              </li>
-              <li>Mãi Bên Em - Endless - (C13)</li>
-              <li>Big Hero 6</li>
-              <li>Dinh Thự Oan Khuất - Ghost Of War - (C18)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tool-buy-ticket__secondary-section border-right--separated">
-          <div
-            class="select-menu"
-            data-toggle="collapse"
-            data-target="#select-session"
-          >
-            <span> Suất chiếu</span>
-            <i class="fa fa-angle-down" aria-hidden="true"></i>
-            <ul class="select-show collapse" id="select-session">
-              <li>Cá Sấu Tử Thần - Black Water: Abyss - (C18)</li>
-              <li>
-                Nội Chiến Siêu Anh Hùng - Captain America: Civil War (NC16)
-              </li>
-              <li>Mãi Bên Em - Endless - (C13)</li>
-              <li>Big Hero 6</li>
-              <li>Dinh Thự Oan Khuất - Ghost Of War - (C18)</li>
-            </ul>
-          </div>
-        </div>
-        <div class="tool-buy-ticket__secondary-section">
-          <a href="#" class="button--black-lighter d-block text-center"
-            >MUA VÉ NGAY</a
-          >
-        </div>
-      </div> -->
+      
     </section>
 
+    <section class="homeFilms">
+      <div class="container">
+        <h2 class="homeFilms__title">lịch chiếu phim</h2>
+        <div class="homeFilms__inner">
+          <img
+          class="carousel carousel__btn--prev homeFilms__prev"
+          src="./img/back-session.png"
+          alt=""
+          srcset=""
+        />
+        <img
+          class="carousel carousel__btn--next homeFilms__next"
+          src="./img/next-session.png"
+          alt=""
+          srcset=""
+        />
+        <div class="homeFilms__carousel">
+          <div class="homeFilms__carousel-item">
+            <div class="homeFilms__item-list">
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                  <div class="card__title">antebellum: bẫy thực tại kinh hoàng</div>
+                  <div class="card__info">
+                    <p>thời lượng: <span>100 phút</span></p>
+                    <div class="card__rating">
+                     <p>Đánh giá:  <span>7.4</span></p>
+                      <div>
+                        <img class="card__rating-icon"src="./img/star1.png" alt="start-1">
+                        <img class="card__rating-icon" src="./img/star1.png" alt="start-1">
+                        <img class="card__rating-icon" src="./img/star1.png" alt="start-1">
+                        <img class="card__rating-icon" src="./img/star1.2.png" alt="start-1">
+                      </div>
+                    </div>
+                  </div>
+                  <button class="button button--green card__btn-play">xem trailer</button>
+                  <button class="button button--primary card__btn-buy">mua vé</button>
+                </div>
+              </div>
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+            </div>
+            <div class="homeFilms__item-list">
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+              <div class="homeFilms__card">
+                <div class="homeFilms__card-front">
+                  <img src="./img/homeFilms-carousel/con-mua-tinh-dau-classic-again-15922110606607_215x318.png" alt="con-mua-tinh-dau">
+                </div>
+                <div class="homeFilms__card-back">
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>

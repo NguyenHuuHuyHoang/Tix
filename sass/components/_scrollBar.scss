@@ -1,8 +1,8 @@
 .scroll-bar--custom {
     scrollbar-width: thin;
-    scrollbar-color: red;
     background-color: white;
-    overflow-y:scroll;
+    // overflow: hidden;
+    overflow-y:auto;
 
     &::-webkit-scrollbar {
         width: 5px;
