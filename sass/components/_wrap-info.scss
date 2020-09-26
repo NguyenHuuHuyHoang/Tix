@@ -1,39 +1,45 @@
 
-.wrap-info {
-            @include flex(stretch, center);
-
-            &__left {
-                width: 5rem;
-                margin-right: 1rem;
+.wrap{
+    width: 94rem;
+    margin: 0 auto;
+    
+    &-info {
+                @include flex(stretch, center);
+    
+                &__left {
+                    width: 5rem;
+                    margin-right: 1rem;
+                }
+    
+                &__right {
+                    @include flex(flex-start, flex-start, nowrap, column);
+                    width: calc(100% - 6rem);
+    
+                    h4,
+                    p,
+                    h5 {
+                        margin-bottom: 0.2rem;
+                        text-transform: capitalize;
+                    }
+    
+                    p {
+                        font-size: 1.4rem;
+                        white-space: nowrap;
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        color: $inactive-color;
+                        text-transform: capitalize;
+                    }
+    
+                    h5 {
+                        font-size: 1.3rem;
+                        color: $active-color;
+                        cursor: pointer;
+                    }
+    
+                }
             }
+}
 
-            &__right {
-                @include flex(flex-start, flex-start, nowrap, column);
-                width: calc(100% - 6rem);
-
-                h4,
-                p,
-                h5 {
-                    margin-bottom: 0.2rem;
-                    text-transform: capitalize;
-                }
-
-                p {
-                    font-size: 1.4rem;
-                    white-space: nowrap;
-                    width: 100%;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    color: $inactive-color;
-                    text-transform: capitalize;
-                }
-
-                h5 {
-                    font-size: 1.3rem;
-                    color: $active-color;
-                    cursor: pointer;
-                }
-
-            }
-        }
     

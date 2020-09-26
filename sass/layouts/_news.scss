@@ -1,0 +1,131 @@
+.news {
+    @include flex(center,center,nowrap ,column);
+    margin-top: 3rem;
+    
+
+    &__titles {
+        @include flex(center, space-around);
+        margin-bottom: 3rem;
+        cursor: pointer;
+
+        &-item {
+            @extend %transition15;
+            text-transform: capitalize;
+
+            &:hover,&.active {
+                color: $active-color;
+                font-size: 3rem;
+            }
+        }
+
+        &-item:not(:first-child) {
+            margin-left: 3rem;
+        }
+
+        
+    }
+
+    &__inner {
+        @include flex(flex-start, flex-start, nowrap, column);
+    }
+    
+    
+
+    .item {
+        padding: 0 0.5rem;
+        width: 100%;
+
+        &-row {
+            @include flex(flex-start, flex-start, nowrap, row);
+        }
+        
+        &-img {
+            display: block;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            margin-bottom: 1rem;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        
+        &-title {
+            @extend %transition15;
+            display: -webkit-box;
+            font-size: 1.6rem;
+            letter-spacing: 0.11rem;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            cursor: pointer;
+
+            &:hover {
+                color: $active-color;
+            }
+        }
+
+        &-content {
+            display: -webkit-box;
+            color:$inactive-color;
+            font-size: 1.4rem;
+            letter-spacing: 0.12rem;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-all;
+
+        }
+
+        &-review {
+            margin-top: auto;
+            @include flex;
+
+            &>div {
+                padding: 1rem;
+                @include flex(center);
+                margin-right: 2rem;
+                color: $inactive-color;
+
+                &>img {
+                    @extend %transition15;
+                    width: 2rem;
+                    margin-right: 1rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                }
+            }
+
+        }
+    }
+
+    .list {
+        @include flex(center,space-around,nowrap,column);
+
+        &__item {
+            @include flex(center, space-between);
+            margin-bottom: 1rem;
+
+        }
+
+        &__img {
+            border-radius: 0.5rem;
+            overflow: hidden;
+           @include size(5rem);
+
+            &>img {
+                
+                border-radius: 0.5rem;
+            }
+        }
+
+        &__title {
+            @extend .item-title;
+            width: calc(100% - 6rem);
+            color: $inactive-color; 
+        }
+    }
+}
