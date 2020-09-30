@@ -18,7 +18,7 @@
       crossorigin="anonymous"
     />
 
-    <!-- SLICK CAROULSE -->
+    <!-- SLICK CAROUSEL -->
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
     <!-- MAIN CSS FILE -->
@@ -942,10 +942,25 @@
           </p>
         </div>
         <div class="app__right">
-            <img src="./img/mobile.png" alt="" class="app__img">
+            <!-- <img src="./img/mobile.png" alt="" class="app__img"> -->
             <div class="app__carousle">
-                <img src="" alt="">
-            </div>
+                <img src="./img/app-carousel/slide1.jpg" alt="">
+                <img src="./img/app-carousel/slide2.jpg" alt="">
+                <img src="./img/app-carousel/slide3.jpg" alt="">
+                <img src="./img/app-carousel/slide4.jpg" alt="">
+                <img src="./img/app-carousel/slide5.jpg" alt="">
+                <img src="./img/app-carousel/slide6.jpg" alt="">
+                <img src="./img/app-carousel/slide7.jpg" alt="">
+                <img src="./img/app-carousel/slide8.jpg" alt="">
+                <img src="./img/app-carousel/slide9.jpg" alt="">
+                <img src="./img/app-carousel/slide10.jpg" alt="">
+                <img src="./img/app-carousel/slide11.jpg" alt="">
+                <img src="./img/app-carousel/slide12.jpg" alt="">
+                <img src="./img/app-carousel/slide13.jpg" alt="">
+                <img src="./img/app-carousel/slide14.jpg" alt="">
+                <img src="./img/app-carousel/slide15.jpg" alt="">
+                <img src="./img/app-carousel/slide16.jpg" alt="">
+              </div>
         </div>
       </div>
     </section>
@@ -976,6 +991,13 @@
         cssEase: "linear",
         prevArrow: $(".homeFilms__prev"),
         nextArrow: $(".homeFilms__next"),
+      });
+      $(".app__carousle").slick({
+        autoplay:true,
+        speed:500,
+        cssEase:"linear",
+        swipeToSlide: true,
+        arrows: false,
       });
 
     </script>
