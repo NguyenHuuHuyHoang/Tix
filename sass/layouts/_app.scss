@@ -56,16 +56,27 @@
     }
 
     &__img {
+        position: absolute;
+        width: 100%;
         padding: 0 28%;
+        top: 0;
+        left: 0;
+        transform: translateY(-50%);z-index: 10;
     }
 
     &__carousel {
         position: absolute;
         width: 100%;
+        padding: 1.5% 29.5% 0 29.5%;
         top: 0;
         left: 0;
-        padding: 1.5% 29.5% 0 29.5%;
-        z-index: 20;
+        transform: translateY(-50%);  
+        z-index: 5;  
+        
+        &:hover {
+            z-index:20;
+        }
+       
     }
     
 }

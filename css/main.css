@@ -11343,15 +11343,28 @@ body {
 }
 
 .app__img {
+  position: absolute;
+  width: 100%;
   padding: 0 28%;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 10;
 }
 
 .app__carousel {
   position: absolute;
   width: 100%;
+  padding: 1.5% 29.5% 0 29.5%;
   top: 0;
   left: 0;
-  padding: 1.5% 29.5% 0 29.5%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 5;
+}
+
+.app__carousel:hover {
   z-index: 20;
 }
 /*# sourceMappingURL=main.css.map */

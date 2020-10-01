@@ -941,9 +941,9 @@
             TIX có hai phiên bản <span>iOS</span> & <span>Android</span>
           </p>
         </div>
-        <div class="app__right">
-            <!-- <img src="./img/mobile.png" alt="" class="app__img"> -->
-            <div class="app__carousle">
+        <div class="app__right my-right">
+            <img src="./img/mobile.png" alt="" class="app__img">
+            <div class="app__carousel">
                 <img src="./img/app-carousel/slide1.jpg" alt="">
                 <img src="./img/app-carousel/slide2.jpg" alt="">
                 <img src="./img/app-carousel/slide3.jpg" alt="">
@@ -992,12 +992,13 @@
         prevArrow: $(".homeFilms__prev"),
         nextArrow: $(".homeFilms__next"),
       });
-      $(".app__carousle").slick({
+      $(".app__carousel").slick({
         autoplay:true,
         speed:500,
         cssEase:"linear",
         swipeToSlide: true,
         arrows: false,
+        swipe:true,
       });
 
     </script>
