@@ -52,16 +52,15 @@
     &__right {
     @include flex(center,center);
     position: relative;
-        
+        height: 100%;
     }
 
     &__img {
-        position: absolute;
-        width: 100%;
-        padding: 0 28%;
-        top: 0;
-        left: 0;
-        transform: translateY(-50%);z-index: 10;
+        width: 25%;
+        height: 100%;
+        background-image: url(../../img/mobile.png);
+       background-position: center;
+       background-size: cover;
     }
 
     &__carousel {
