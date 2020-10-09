@@ -9974,7 +9974,7 @@ body {
   text-align: center;
 }
 
-.slick-slider .slick-list {
+.app__carousel.slick-slider .slick-list {
   border-radius: 20px;
 }
 
