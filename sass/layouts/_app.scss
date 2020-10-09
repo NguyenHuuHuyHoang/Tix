@@ -56,26 +56,24 @@
     }
 
     &__img {
-        width: 25%;
-        height: 100%;
-        background-image: url(../../img/mobile.png);
-       background-position: center;
-       background-size: cover;
+        padding: 0 28%;
     }
 
     &__carousel {
         position: absolute;
-        width: 100%;
-        padding: 1.5% 29.5% 0 29.5%;
-        top: 0;
-        left: 0;
-        transform: translateY(-50%);  
-        z-index: 5;  
+padding: 1.5% 29.3% 0 29.3%;
+top: 0;
+left: 0;
+width: 100%;
+
         
-        &:hover {
-            z-index:20;
-        }
-       
     }
+
+    
+
+    
+
+
+    
     
 }

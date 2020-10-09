@@ -10,8 +10,6 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <!-- BOOTSTRAP 4 LIBRARY -->
-    
     <!-- SLICK CAROUSEL -->
     <link rel="stylesheet" href="./css/slick.css" />
     <link rel="stylesheet" href="./css/slick-theme.css" />
@@ -936,26 +934,25 @@
           </p>
         </div>
         <div class="app__right my-right">
-            <div class="app__img">
-            </div>
-              <div class="app__carousel">
-                  <img src="./img/app-carousel/slide1.jpg" alt="">
-                  <img src="./img/app-carousel/slide2.jpg" alt="">
-                  <img src="./img/app-carousel/slide3.jpg" alt="">
-                  <img src="./img/app-carousel/slide4.jpg" alt="">
-                  <img src="./img/app-carousel/slide5.jpg" alt="">
-                  <img src="./img/app-carousel/slide6.jpg" alt="">
-                  <img src="./img/app-carousel/slide7.jpg" alt="">
-                  <img src="./img/app-carousel/slide8.jpg" alt="">
-                  <img src="./img/app-carousel/slide9.jpg" alt="">
-                  <img src="./img/app-carousel/slide10.jpg" alt="">
-                  <img src="./img/app-carousel/slide11.jpg" alt="">
-                  <img src="./img/app-carousel/slide12.jpg" alt="">
-                  <img src="./img/app-carousel/slide13.jpg" alt="">
-                  <img src="./img/app-carousel/slide14.jpg" alt="">
-                  <img src="./img/app-carousel/slide15.jpg" alt="">
-                  <img src="./img/app-carousel/slide16.jpg" alt="">
-                </div>
+                <img class="app__img" src="./img/mobile.png" alt="">
+                <div class="app__carousel" id="app__carousel">
+                    <img src="./img/app-carousel/slide1.jpg" alt="">
+                    <img src="./img/app-carousel/slide2.jpg" alt="">
+                    <img src="./img/app-carousel/slide3.jpg" alt="">
+                    <img src="./img/app-carousel/slide4.jpg" alt="">
+                    <img src="./img/app-carousel/slide5.jpg" alt="">
+                    <img src="./img/app-carousel/slide6.jpg" alt="">
+                    <img src="./img/app-carousel/slide7.jpg" alt="">
+                    <img src="./img/app-carousel/slide8.jpg" alt="">
+                    <img src="./img/app-carousel/slide9.jpg" alt="">
+                    <img src="./img/app-carousel/slide10.jpg" alt="">
+                    <img src="./img/app-carousel/slide11.jpg" alt="">
+                    <img src="./img/app-carousel/slide12.jpg" alt="">
+                    <img src="./img/app-carousel/slide13.jpg" alt="">
+                    <img src="./img/app-carousel/slide14.jpg" alt="">
+                    <img src="./img/app-carousel/slide15.jpg" alt="">
+                    <img src="./img/app-carousel/slide16.jpg" alt="">
+                  </div>
         </div>
       </div>
     </section>
@@ -964,6 +961,9 @@
     <footer class="footer">
 
     </footer>
+    <a id="toTop" href="#">
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </a>
     <!-- END FOOTER -->
     <script src="./js/jquery-3.3.1.slim.min.js"></script>
     <script src="./js/popper.min.js"></script>
@@ -987,14 +987,27 @@
         nextArrow: $(".homeFilms__next"),
       });
       $(".app__carousel").slick({
-        autoplay:true,
+        // autoplay:true,
         speed:500,
         cssEase:"linear",
         swipeToSlide: true,
         arrows: false,
         swipe:true,
       });
+      
+      
 
+$(document).ready(function(){ 
+	$(window).scroll(function(){ 
+		if ($(this).scrollTop() > 100) { //thực hiện lệnh điều kiện Khi lăn chuột xuống dưới hơn 100px
+			$('#toTop').attr("style", "display:block");
+		} else {
+      $('#toTop').attr("style", "display:none");
+    }
+	}); 
+	
+});
+      
     </script>
   </body>
 </html>
