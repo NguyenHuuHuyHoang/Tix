@@ -4,7 +4,7 @@
   transition: all 0.5s ease-out 0s;
 }
 
-.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__btn-play, .tool-select, .tool__selected, .homeCinemaComplex__cinemas-item, .homeCinemaComplex .cine-list__item, .homeCinemaComplex .movies__session, .news__titles-item, .news .item-title, .news .list__title, .news .item-review > div > img, .app__link > span {
+.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__btn-play, .tool-select, .tool__selected, .homeCinemaComplex__cinemas-item, .homeCinemaComplex .cine-list__item, .homeCinemaComplex .movies__session, .news__titles-item, .news .item-title, .news .list__title, .news .item-review > div > img, .app__link > span, .footer__content a, .footer__logo, .footer__copy-rights a {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
@@ -11363,6 +11363,118 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+}
+
+.footer {
+  padding: 2rem 0px;
+  background-color: #222;
+  color: #949494;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__item {
+  width: calc(100% / 3);
+}
+
+.footer__item:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.footer__title {
+  color: white;
+}
+
+.footer__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__content {
+  width: 50%;
+}
+
+.footer__content a {
+  display: block;
+  color: #949494;
+}
+
+.footer__content a:hover {
+  color: #FA5238;
+}
+
+.footer__logo {
+  width: 3rem;
+}
+
+.footer__logo:hover {
+  opacity: .5;
+}
+
+.footer__middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__middle a:not(:first-child) {
+  margin-left: 1.5rem;
+}
+
+.footer__middle:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer__right a {
+  margin: 0 5px;
+}
+
+.footer hr {
+  display: block;
+  background-color: #4a4a4a;
+}
+
+.footer__copy-rights {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.footer__copy-rights a {
+  text-decoration: underline;
+  color: white;
+}
+
+.footer__copy-rights a:hover {
+  color: #FA5238;
 }
 
 #toTop {

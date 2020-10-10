@@ -1,0 +1,95 @@
+.footer {
+    padding: 2rem 0px;
+    background-color: #222;
+    color: #949494;
+   
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    &__item {
+        width: calc(100% / 3);
+
+        &:last-child {
+            display: flex;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        color: white;
+    }
+
+    &__left {
+        display: flex;
+    }
+
+
+    &__content {
+        width: 50%;
+
+        & a {
+            display: block;
+            color: #949494;
+            @extend %transition15;
+
+            &:hover {
+                color: $active-color;
+            }
+        }
+
+    }
+
+    &__logo {
+        // @include size(3rem);
+        width: 3rem;
+        @extend %transition15;
+
+        &:hover {
+            opacity: .5;
+        }
+        
+    }
+
+    &__middle {
+        display: flex;
+
+        & a:not(:first-child){
+            margin-left: 1.5rem;
+        }
+
+        &:not(:first-child) {
+            margin-top: 1.5rem;
+        }
+    }
+
+    &__right {
+        @include flex(flex-start, center);
+        
+        & a {
+            margin: 0 5px;
+        }
+    }
+
+    & hr {
+        display: block;
+        background-color: #4a4a4a;
+    }
+
+    &__copy-rights {
+        text-align: center;
+        padding: 0.5rem 0;
+
+        & a{
+            text-decoration: underline;
+            color: white;
+            @extend %transition15;
+
+            &:hover {
+                color: $active-color;
+            }
+        }
+    }
+}
