@@ -36,7 +36,10 @@
         width: 100%;
 
         &-row {
-            @include flex(flex-start, flex-start, nowrap, row);
+            @include flex(flex-start, flex-start, nowrap, column);
+            @include responsive(tablet) {
+                @include flex(flex-start, flex-start, nowrap, row); 
+            }
         }
         
         &-img {

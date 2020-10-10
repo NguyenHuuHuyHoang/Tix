@@ -11,6 +11,10 @@
     position: fixed;
     bottom: 50px;
     right: 50px;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 #toTop i{

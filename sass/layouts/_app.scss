@@ -6,6 +6,14 @@
     background-position: center;
     background-repeat: no-repeat;
 
+    @include responsive(mobile) {
+        display: none;
+    }
+
+    @include responsive(tablet) {
+        display: none;
+    }
+
     &__inner {
         @include flex(center, space-between);
         color: getColor(white);

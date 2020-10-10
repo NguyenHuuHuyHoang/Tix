@@ -21,6 +21,20 @@
   }
 }
 
+%visibleOnDesktop {
+  @include responsive(mobile) {
+    display: none;
+  }
+  
+  @include responsive(tablet) {
+    display: none;
+  }
+  
+  @include responsive(desktop) {
+    display: block;
+   }
+}
+
 
 %center-block {
   display: block;

@@ -3,6 +3,13 @@
     background-color: #222;
     color: #949494;
    
+    @include responsive(mobile) {
+        display: none;
+    }
+
+    @include responsive(tablet) {
+        display: none;
+    }
 
     &__inner {
         display: flex;

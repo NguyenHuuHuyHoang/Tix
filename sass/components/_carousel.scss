@@ -12,9 +12,18 @@
 
     &__btn--prev {
         left: 1.5rem;
+        visibility: hidden;
+        @include responsive (desktop) {
+            visibility: visible;
+        }
     }
 
     &__btn--next {
         right: 1.5rem;
+        visibility: hidden;
+        @include responsive (desktop) {
+            visibility: visible;
+        }
     }
 }
+
