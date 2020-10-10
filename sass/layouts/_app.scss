@@ -6,23 +6,29 @@
     background-position: center;
     background-repeat: no-repeat;
 
-    @include responsive(mobile) {
-        display: none;
-    }
-
-    @include responsive(tablet) {
-        display: none;
-    }
 
     &__inner {
-        @include flex(center, space-between);
+        @include flex(center, flex-start, nowrap, column);
         color: getColor(white);
+
+        @include responsive (desktop) {
+            @include flex(center, space-between);
+        }
     }
 
 
     &__left,&__right {
-      width: 50%;
-      margin-bottom: 3rem;
+      width: 100%;
+      text-align: center;
+      
+
+
+      @include responsive(desktop){
+        padding-left: 0;
+        text-align: start;
+        width: 50%;
+        margin-bottom: 3rem;
+      }
     }
 
     &__title {
@@ -69,11 +75,14 @@
 
     &__carousel {
         position: absolute;
-padding: 1.5% 29.3% 0 29.3%;
-top: 0;
-left: 0;
-width: 100%;
+        padding: 1.5% 29.3% 0 29.3%;
+        top: 0;
+        left: 0;
+        width: 100%;
 
+        @include responsive(desktop) {
+            padding: 1.5% 29.3% 0 29.3%;
+        }
         
     }
 
