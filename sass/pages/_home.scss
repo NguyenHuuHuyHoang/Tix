@@ -29,9 +29,12 @@
     border: 1px solid transparent;
     opacity: 0.9;
 
-    &:hover {
-        color: $active-color;
-        border: 1px solid currentColor;
-        opacity: 1;
+    @media(hover: hover) and (pointer: fine) {
+        &:hover {
+            color: $active-color;
+            border: 1px solid currentColor;
+            opacity: 1;
+        }
     }
+
 }
