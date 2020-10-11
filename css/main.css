@@ -10005,6 +10005,10 @@ body {
   text-transform: uppercase;
 }
 
+.button:focus {
+  outline: none;
+}
+
 .button--primary {
   background-color: #FA5238;
   color: #FFF;
@@ -10035,7 +10039,7 @@ body {
 .button--green:hover {
   background-color: #FFF;
   color: #108F3E;
-  border: 1px solid currentColor;
+  border: 1px solid #108F3E;
 }
 
 .scroll-bar--custom {
@@ -11645,19 +11649,20 @@ body {
 }
 
 #toTop i {
+  width: 5rem;
+  height: 5rem;
   text-align: center;
-  line-height: 45px;
-  width: 50px;
-  height: 50px;
+  line-height: 4.5rem;
   font-size: 3rem;
-  color: #FA5238;
+  color: #949494;
   font-weight: bold;
   border-radius: 50%;
   border: 1px solid transparent;
-  opacity: .6;
+  opacity: 0.9;
 }
 
 #toTop i:hover {
+  color: #FA5238;
   border: 1px solid currentColor;
   opacity: 1;
 }

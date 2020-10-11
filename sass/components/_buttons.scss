@@ -4,7 +4,11 @@
     border-radius: .5rem;
     background: transparent;
     text-transform: uppercase;
-
+    
+    &:focus {
+        outline:none;
+    }
+    
     &--primary {
         @extend %transition15;
         background-color: $primary-color;
@@ -34,10 +38,12 @@
         background-color: getColor(green-dark);
         color: getColor(white);
         
+
+        
         &:hover {
             background-color: getColor(white);
             color: getColor(green-dark);
-            border: 1px solid currentColor;
+            border: 1px solid getColor(green-dark);
         }
     }
 }

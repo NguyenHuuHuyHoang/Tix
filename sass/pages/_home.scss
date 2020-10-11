@@ -18,21 +18,20 @@
 }
 
 #toTop i{
+    @include size(5rem);
+    @extend %transition50;
     text-align: center;
-    line-height: 45px;
-    width: 50px;
-    height: 50px;
+    line-height: 4.5rem;
     font-size: 3rem;
-    color: $active-color;
+    color: $inactive-color;
     font-weight: bold;
     border-radius: 50%;
     border: 1px solid transparent;
-    @extend %transition50;
-    opacity: .6;
+    opacity: 0.9;
 
     &:hover {
+        color: $active-color;
         border: 1px solid currentColor;
         opacity: 1;
-
     }
 }
