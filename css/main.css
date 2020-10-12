@@ -11661,7 +11661,7 @@ body {
   opacity: 0.9;
 }
 
-@media (hover: hover) and (pointer: fine) {
+@media (hover: hover) {
   #toTop i:hover {
     color: #FA5238;
     border: 1px solid currentColor;
