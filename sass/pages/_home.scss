@@ -7,43 +7,27 @@
 @import '../layouts/app';
 @import '../layouts/footer';
 
-#toTop {
+
+
+#toTop > i{
     position: fixed;
-    bottom: 50px;
-    right: 50px;
-
-    &:focus {
-        outline: none;
-    }
-}
-
-#toTop i{
-    @include size(5rem);
     @extend %transition50;
+    @include size(5rem);
+    bottom: 5rem;
+    right: 5rem;
     text-align: center;
     line-height: 4.5rem;
     font-size: 3rem;
     color: $inactive-color;
     font-weight: bold;
+    opacity: 1;
     border-radius: 50%;
     border: 1px solid transparent;
-    opacity: 0.9;
 
-    
-
-    @media(hover: hover) {
-        &:hover {
-            color: $active-color;
-            border: 1px solid currentColor;
-            opacity: 1;
-        }
+    @include touchResponsive {
+        color: $active-color;
+        border: 1px solid currentColor;
+        opacity: 1;
     }
-    // &:active {
-    //         color: $active-color;
-    //         border: 1px solid currentColor;
-    //         opacity: 1;
-    // }
-
-        
 
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-#toTop i {
+#toTop > i {
   -webkit-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;
 }
@@ -10014,10 +10014,18 @@ body {
   color: #FFF;
 }
 
-.button--primary:hover {
+.button--primary:active {
   background-color: #FFF;
   color: #FA5238;
   border: 1px solid currentColor;
+}
+
+@media only screen and (min-width: 64em) {
+  .button--primary:hover {
+    background-color: #FFF;
+    color: #FA5238;
+    border: 1px solid currentColor;
+  }
 }
 
 .button--grey {
@@ -10025,10 +10033,18 @@ body {
   color: #FFF;
 }
 
-.button--grey:hover {
+.button--grey:active {
   background-color: #FFF;
   color: #4A4A4A;
   border: 1px solid currentColor;
+}
+
+@media only screen and (min-width: 64em) {
+  .button--grey:hover {
+    background-color: #FFF;
+    color: #4A4A4A;
+    border: 1px solid currentColor;
+  }
 }
 
 .button--green {
@@ -10036,10 +10052,18 @@ body {
   color: #FFF;
 }
 
-.button--green:hover {
+.button--green:active {
   background-color: #FFF;
   color: #108F3E;
   border: 1px solid #108F3E;
+}
+
+@media only screen and (min-width: 64em) {
+  .button--green:hover {
+    background-color: #FFF;
+    color: #108F3E;
+    border: 1px solid #108F3E;
+  }
 }
 
 .scroll-bar--custom {
@@ -10197,7 +10221,8 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   z-index: 10;
   top: 0;
   width: 100%;
@@ -10488,7 +10513,7 @@ body {
 
 .banner {
   position: relative;
-  margin-top: 6rem;
+  width: 100%;
 }
 
 @media only screen and (max-width: 47.9375em) {
@@ -10533,12 +10558,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  visibility: hidden;
   position: absolute;
   top: 100%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 94rem;
+  width: 100%;
+  max-width: 94rem;
   height: 8rem;
   background-color: #FFF;
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
@@ -10546,17 +10573,9 @@ body {
   border-radius: .6rem;
 }
 
-@media only screen and (min-width: 48em) {
-  .tool {
-    visibility: hidden;
-    opacity: 0;
-  }
-}
-
 @media only screen and (min-width: 64em) {
   .tool {
     visibility: visible;
-    opacity: 1;
   }
 }
 
@@ -11638,34 +11657,90 @@ body {
   color: #FA5238;
 }
 
-#toTop {
+#toTop > i {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
-}
-
-#toTop:focus {
-  outline: none;
-}
-
-#toTop i {
   width: 5rem;
   height: 5rem;
+  bottom: 5rem;
+  right: 5rem;
   text-align: center;
   line-height: 4.5rem;
   font-size: 3rem;
   color: #949494;
   font-weight: bold;
+  opacity: 1;
   border-radius: 50%;
   border: 1px solid transparent;
-  opacity: 0.9;
 }
 
-@media (hover: hover) {
-  #toTop i:hover {
+#toTop > i:active {
+  color: #FA5238;
+  border: 1px solid currentColor;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 64em) {
+  #toTop > i:hover {
     color: #FA5238;
     border: 1px solid currentColor;
     opacity: 1;
   }
+}
+
+body {
+  background: url("../../img/login-img/bg2.jpg") repeat center center;
+}
+
+.form {
+  min-width: 36rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 50, 93, 0.9)), to(rgba(8, 22, 48, 0.9)));
+  background-image: linear-gradient(to bottom, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
+  padding: 1rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+
+.form img {
+  display: inline-block;
+  width: 60%;
+}
+
+.form__login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form__login i {
+  color: white;
+}
+
+.form__login input {
+  width: 100%;
+}
+
+.form__login input:focus {
+  outline: #FA5238;
 }
 /*# sourceMappingURL=main.css.map */

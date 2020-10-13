@@ -1,23 +1,19 @@
 .tool {
     @include flex(center, space-between);
+    visibility: hidden;
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 94rem;
+    width: 100%;
+    max-width: 94rem;
     height: 8rem;
     background-color: getColor(white);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
     border-radius: .6rem;
 
-    @include responsive (tablet) {
-        visibility: hidden;
-        opacity: 0;
-    }
-
     @include responsive(desktop) {
         visibility: visible;
-        opacity: 1;
     }
 
     &-item {

@@ -1,7 +1,6 @@
 .banner {
     position: relative;
-    margin-top: 6rem;
-
+    width: 100%;
     
 
     @include responsive(mobile) {
