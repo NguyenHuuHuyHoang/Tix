@@ -28,7 +28,6 @@
         color: getColor(white);
 
         @include touchResponsive {
-            
             background-color: getColor(white);
             color: getColor(black-lighter);
             border: 1px solid currentColor;
@@ -48,6 +47,25 @@
 
         }
 
+    }
+
+    &--more { 
+        padding: 1rem 1.5rem;
+        background: getColor(white);
+        color: getColor(black-lighter);
+        border: 1px solid getColor(black-lighter);
+        display: block;
+        margin: auto;
+
+        @include touchResponsive {
+            background: $active-color;
+        color: getColor(white);
+        border: 1px solid $active-color;
+        }
+
+        @include responsive(tablet) {
+            display: none;
+        }
     }
 }
 

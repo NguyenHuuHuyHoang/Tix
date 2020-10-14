@@ -10066,6 +10066,35 @@ body {
   }
 }
 
+.button--more {
+  padding: 1rem 1.5rem;
+  background: #FFF;
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  display: block;
+  margin: auto;
+}
+
+.button--more:active {
+  background: #FA5238;
+  color: #FFF;
+  border: 1px solid #FA5238;
+}
+
+@media only screen and (min-width: 64em) {
+  .button--more:hover {
+    background: #FA5238;
+    color: #FFF;
+    border: 1px solid #FA5238;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .button--more {
+    display: none;
+  }
+}
+
 .scroll-bar--custom {
   scrollbar-width: thin;
   background-color: white;
@@ -10534,11 +10563,10 @@ body {
 
 .banner__carousel > .slick-dots li button:before {
   font-size: 1.5rem;
-  color: #949494;
 }
 
-.banner__carousel > .slick-dots li button {
-  color: white;
+.banner__carousel > .slick-dots li button:before {
+  color: #DDD;
 }
 
 .banner__carousel > .slick-dots li.slick-active button:before {
@@ -10719,6 +10747,12 @@ body {
 
 .homeFilms {
   margin-top: 8rem;
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .homeFilms {
+    margin-top: 2rem;
+  }
 }
 
 @media only screen and (min-width: 48em) {
@@ -11177,6 +11211,10 @@ body {
   margin-top: 3rem;
 }
 
+.news .button--more {
+  margin-top: 1rem;
+}
+
 .news__titles {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11201,9 +11239,44 @@ body {
   text-transform: capitalize;
 }
 
+@media only screen and (max-width: 47.9375em) {
+  .news__titles-item {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .news__titles-item {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .news__titles-item {
+    font-size: 2rem;
+  }
+}
+
 .news__titles-item:hover, .news__titles-item.active {
   color: #FA5238;
-  font-size: 3rem;
+}
+
+@media only screen and (max-width: 47.9375em) {
+  .news__titles-item:hover, .news__titles-item.active {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (min-width: 48em) {
+  .news__titles-item:hover, .news__titles-item.active {
+    font-size: 2.0rem;
+  }
+}
+
+@media only screen and (min-width: 64em) {
+  .news__titles-item:hover, .news__titles-item.active {
+    font-size: 2.4rem;
+  }
 }
 
 .news__titles-item:not(:first-child) {

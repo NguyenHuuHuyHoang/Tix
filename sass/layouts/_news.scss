@@ -2,6 +2,11 @@
     @include flex(center,center,nowrap ,column);
     margin-top: 3rem;
     
+    & .button--more {
+        margin-top: 1rem;
+    }
+
+    
 
     &__titles {
         @include flex(center, center);
@@ -9,12 +14,31 @@
         cursor: pointer;
 
         &-item {
+
             @extend %transition15;
             text-transform: capitalize;
+            @include responsive(mobile) {
+                font-size: 1.6rem;
+            }
+            @include responsive(tablet) {
+                font-size: 1.8rem;
+            }
+            @include responsive(desktop) {
+                font-size: 2rem;
+            }
 
             &:hover,&.active {
                 color: $active-color;
-                font-size: 3rem;
+                
+                @include responsive(mobile) {
+                    font-size: 1.8rem;
+                }
+                @include responsive(tablet) {
+                    font-size: 2.0rem;
+                }
+                @include responsive(desktop) {
+                    font-size: 2.4rem;
+                }
             }
         }
 
