@@ -22,7 +22,6 @@
       text-align: center;
       
 
-
       @include responsive(desktop){
         padding-left: 0;
         text-align: start;
@@ -60,6 +59,14 @@
             &:hover {
                 color: $active-color;
             }
+        }
+    }
+
+    &__left {
+        margin-bottom: 8rem;
+
+        @include responsive(tablet) {
+            margin-bottom: 5rem;
         }
     }
 

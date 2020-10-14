@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TIX Đặt vé nhanh nhất / Đăng nhập</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-</head>
-<body>
-    
-        <div class="form">
-           <a href="index.html">
-                <img src="./img/login-img/group@2x.png" alt="" srcset="">
-           </a>
-           <form action="submit" class="form__login">
-               <input type="text" name="userName">
-               <input type="password" name="password" id="loginPassword">
-               <i class="fa fa-eye" aria-hidden="true"></i>
-               <button class="button button--green">đăng nhập</button>
-           </form>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="container">
+        <div class="page__form">
+          <a class="page__logo" href="index.html">
+            <img src="./img/login-img/group@2x.png" alt="" srcset="" />
+          </a>
+          <h4 class="page__title">đăng nhập</h4>
+          <form action="submit" class="page__login">
+            <div>
+                <label for="userName"><i class="fa fa-user" aria-hidden="true"></i></label>
+                <input type="text" name="userName" />
+            </div>
+            <div>
+                <label for="password"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                <input type="password" name="password" id="loginPassword" />
+                <i class="fa fa-eye" aria-hidden="true"></i>
+            </div>
+            <div>
+                <input type="checkbox" name="rememberLogin" id="rememberLogin" value="rememberLogin"> 
+                <label for="rememberLogin">Lưu lại đăng nhập</label>
+            </div>
+            <button class="button button--green">đăng nhập</button>
+          </form>
         </div>
-</body>
+      </div>
+    </div>
+  </body>
 </html>
 
 <!-- "taiKhoan": "string",
