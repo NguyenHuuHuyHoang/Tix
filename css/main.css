@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
-#toTop > i {
+.banner__btn-play, #toTop > i {
   -webkit-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;
 }
 
-.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .banner__btn-play, .tool-select, .tool__selected, .homeCinemaComplex__cinemas-item, .homeCinemaComplex .cine-list__item, .homeCinemaComplex .movies__session, .news__titles-item, .news .item-title, .news .list__title, .news .item-review > div > img, .app__link > span, .footer__content a, .footer__logo, .footer__copy-rights a {
+.button--primary, .button--grey, .button--green, .carousel, .header, .header__search-input, .header__search-icon, .header__result, .header__result-item > a, .tool-select, .tool__selected, .homeCinemaComplex__cinemas-item, .homeCinemaComplex .cine-list__item, .homeCinemaComplex .movies__session, .news__titles-item, .news .item-title, .news .list__title, .news .item-review > div > img, .app__link > span, .footer__content a, .footer__logo, .footer__copy-rights a {
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
 }
@@ -10522,7 +10522,26 @@ body {
   }
 }
 
-.banner__carousel.slick-dots li.slick-active button:before {
+.banner__btn-play {
+  opacity: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.banner__carousel > .slick-dots {
+  bottom: 60px;
+}
+
+.banner__carousel > .slick-dots li button:before {
+  font-size: 1.5rem;
+  color: #949494;
+}
+
+.banner__carousel > .slick-dots li button {
+  color: white;
+}
+
+.banner__carousel > .slick-dots li.slick-active button:before {
   color: #FA5238;
 }
 
@@ -10530,16 +10549,16 @@ body {
   width: 100%;
 }
 
-.banner__carousel:hover + .banner__btn-play {
-  opacity: 0.5;
+.banner__carousel-item {
+  position: relative;
 }
 
-.banner__btn-play {
-  opacity: 0;
-}
-
-.banner__btn-play:hover {
+.banner:hover .banner__btn-play {
   opacity: 1;
+}
+
+.banner .banner__btn-play:hover {
+  opacity: 0.5;
 }
 
 .tool {
@@ -10560,11 +10579,11 @@ body {
           flex-direction: row;
   visibility: hidden;
   position: absolute;
-  top: 100%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   width: 100%;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
   max-width: 94rem;
   height: 8rem;
   background-color: #FFF;
@@ -11165,8 +11184,9 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-orient: horizontal;
@@ -11685,10 +11705,6 @@ body {
     border: 1px solid currentColor;
     opacity: 1;
   }
-}
-
-body {
-  background: url("../../img/login-img/bg2.jpg") repeat center center;
 }
 
 .form {

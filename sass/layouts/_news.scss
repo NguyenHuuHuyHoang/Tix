@@ -4,7 +4,7 @@
     
 
     &__titles {
-        @include flex(center, space-around);
+        @include flex(center, center);
         margin-bottom: 3rem;
         cursor: pointer;
 

@@ -1,15 +1,36 @@
 .banner {
     position: relative;
     width: 100%;
-    
+
 
     @include responsive(mobile) {
         display: none;
     }
 
+    &__btn-play {
+        @extend %transition50;
+        @extend %center-vertically;
+        opacity: 0;
+        background-color: transparent;
+        border: none;
+    }
+
     &__carousel {
 
-        &.slick-dots li.slick-active button:before {
+        &>.slick-dots {
+            bottom: 60px;
+        }
+
+        &>.slick-dots li button:before {
+           font-size: 1.5rem;
+           color: $inactive-color;
+        }
+
+        &>.slick-dots li button {
+            color: white;
+        }
+
+        &>.slick-dots li.slick-active button:before  {
             color: $active-color;
         }
 
@@ -17,21 +38,25 @@
             width: 100%;
         }
 
-        &:hover + .banner__btn-play {
-            opacity: 0.5;
+        &-item {
+            position: relative;
         }
     }
-
-    &__btn-play {
-        @extend %transition15;
-        @extend %center-vertically;
-        opacity: 0;
-        
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-
     
+
+    &:hover .banner__btn-play {
+        opacity: 1
+    }
+
+    & &__btn-play:hover {
+        opacity: 0.5;
+    }
+
+
+
+
+
+
+
+
 }
