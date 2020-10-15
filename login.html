@@ -13,30 +13,90 @@
   <body>
     <div class="page">
       <div class="container">
-        <div class="page__form">
-          <a class="page__logo" href="index.html">
-            <img src="./img/login-img/group@2x.png" alt="" srcset="" />
-          </a>
-          <h4 class="page__title">đăng nhập</h4>
-          <form action="submit" class="page__login">
-            <div>
-                <label for="userName"><i class="fa fa-user" aria-hidden="true"></i></label>
-                <input type="text" name="userName" />
+        <div class="page__wrapper">
+          <div class="page__form">
+            <a class="page__logo" href="index.html">
+              <img src="./img/login-img/group@2x.png" alt="" srcset="" />
+            </a>
+            <div class="page__title">
+              <h2 class="active" id="btnLogin">đăng nhập</h2>
+              <h2 id="btnSignUp">đăng ký</h2>
             </div>
-            <div>
-                <label for="password"><i class="fa fa-lock" aria-hidden="true"></i></label>
-                <input type="password" name="password" id="loginPassword" />
-                <i class="fa fa-eye" aria-hidden="true"></i>
-            </div>
-            <div>
-                <input type="checkbox" name="rememberLogin" id="rememberLogin" value="rememberLogin"> 
-                <label for="rememberLogin">Lưu lại đăng nhập</label>
-            </div>
-            <button class="button button--green">đăng nhập</button>
-          </form>
+            <form action="submit" class="page__login" id="loginForm">
+              <div>
+                  <label for="userName"><i class="fa fa-user" aria-hidden="true"></i></label>
+                  <input type="text" name="userName" placeholder="Tên Đăng Nhập" autofocus/>
+              </div>
+              <div>
+                  <label for="loginPassword"><i class="fa fa-lock" aria-hidden="true"></i></label>
+                  <input type="password" name="loginPassword" id="loginPassword" placeholder="Mật Khẩu"/>
+                  <span id="alertCapslockOn">Caps lock is ON</span>
+                  <i class="fa fa-eye" aria-hidden="true" id="showPassword"></i>
+                  <i class="fa fa-eye-slash" aria-hidden="true" id="hiddenPassword"></i>
+              </div>
+              <div>
+                  <input type="checkbox" name="rememberLogin" id="rememberLogin" value="rememberLogin"> 
+                  <label for="rememberLogin">lưu lại đăng nhập cho lần sau</label>
+              </div>
+              <a href="#">quên mật khẩu</a>
+              <button class="button button--green">đăng nhập</button>
+            </form>
+            <!-- <form action="submit" class="page__signUp" id="signUpForm">
+              <div>
+                  <label for="userName"><i class="fa fa-user" aria-hidden="true"></i></label>
+                  <input type="text" name="userName" placeholder="Tên Đăng Nhập" autofocus/>
+              </div>
+              <div>
+                  <label for="loginPassword"><i class="fa fa-id-card" aria-hidden="true"></i></label>
+                  <input type="password" name="loginPassword" id="loginPassword" placeholder="Mật Khẩu"/>
+                  <span id="alertCapslockOn">Caps lock is ON</span>
+                  <i class="fa fa-eye" aria-hidden="true" id="showPassword"></i>
+                  <i class="fa fa-eye-slash" aria-hidden="true" id="hiddenPassword"></i>
+              </div>
+              <div>
+                  <input type="checkbox" name="rememberLogin" id="rememberLogin" value="rememberLogin"> 
+                  <label for="rememberLogin">lưu lại đăng nhập</label>
+              </div>
+              <button class="button button--green">đăng nhập</button>
+            </form> -->
+
+          </div>
         </div>
       </div>
     </div>
+    <script>
+      const getEle = Ele => document.getElementById(Ele);
+      let isHiddenPassword = true;
+      const alertCapslockOn = getEle("alertCapslockOn");
+      const inputPassword = getEle("loginPassword");
+      const iconShowPassword = getEle("showPassword");
+      const iconHiddenPassword = getEle("hiddenPassword");
+
+      const loginForm = getEle("loginForm");
+
+      // loginForm.style.display = "none";
+
+      inputPassword.addEventListener('keyup', (event) => {
+        if (event.getModifierState("CapsLock")) {
+          alertCapslockOn.style.display = "block";
+        } else {
+          alertCapslockOn.style.display = "none";
+        }
+      })
+
+      iconShowPassword.addEventListener('click', () => {
+        inputPassword.type = 'text';
+        iconShowPassword.style.display = 'none';
+        iconHiddenPassword.style.display = 'block';
+      })
+
+      iconHiddenPassword.addEventListener('click', () => {
+        inputPassword.type = 'password';
+        iconHiddenPassword.style.display = 'none';
+        iconShowPassword.style.display = 'block';
+      })
+
+    </script>
   </body>
 </html>
 

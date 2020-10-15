@@ -1936,23 +1936,32 @@ body {
 
 .page__form {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  min-width: 36rem;
+  top: 0;
+  left: 0;
+  height: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 50, 93, 0.9)), to(rgba(8, 22, 48, 0.9)));
   background-image: linear-gradient(to bottom, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.45);
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 0;
   border-radius: 1.5rem;
+}
+
+@media only screen and (min-width: 48em) {
+  .page__form {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    min-width: 36rem;
+    height: auto;
+  }
 }
 
 .page__logo {
   display: block;
-  width: 25%;
+  width: 50%;
   margin: 0 auto;
   margin-bottom: 2rem;
 }
@@ -1963,23 +1972,39 @@ body {
   display: block;
 }
 
-.page__title {
-  color: white;
+.page__title h2 {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   margin-bottom: 3rem;
+  cursor: pointer;
 }
 
-.page__login {
-  width: 50%;
+.page__title > h2.active {
+  border-bottom: 3px solid #FA5238;
+}
+
+.page__title h2:first-child {
+  margin-right: 1rem;
+}
+
+.page__title h2:last-child {
+  margin-left: 1rem;
+}
+
+.page form {
+  width: 80%;
   margin: 0 auto;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
 }
 
-.page__login div {
-  text-align: left;
+@media only screen and (min-width: 48em) {
+  .page form {
+    width: 70%;
+  }
 }
 
-.page__login div:nth-child(3) {
+.page form > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1995,9 +2020,108 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  position: relative;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.page form > div i {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.page form > div > label {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: -20px;
+  cursor: pointer;
+}
+
+.page form > div > input {
+  border-radius: 5px;
+}
+
+.page form > button {
+  padding: 1rem 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.page__login div:not(:nth-child(3)) > input {
+  padding: .5rem 0;
+  text-indent: 1rem;
+  width: 100%;
+  border-color: transparent;
+  outline-color: transparent;
+}
+
+.page__login div:not(:nth-child(3)) > input:focus {
+  outline-color: #FA5238;
+}
+
+.page__login div:not(:nth-child(3)) > input:placeholder-shown {
+  text-indent: 1rem;
+  color: #949494;
+}
+
+.page__login div:nth-child(2) {
+  position: relative;
+}
+
+.page__login div:nth-child(2) > i {
+  position: absolute;
+  right: 1rem;
+  margin-right: 0;
+  color: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.page__login div:nth-child(2) > span {
+  position: absolute;
+  bottom: -55%;
+  left: 11%;
+  color: #FA5238;
+  display: none;
+}
+
+.page__login div:nth-child(2) i:nth-of-type(2) {
+  display: none;
+}
+
+.page__login div:nth-child(3) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 2rem;
+  margin-top: 5rem;
+}
+
+.page__login div:nth-child(3) > input {
+  position: static;
+  margin-right: 1rem;
+  cursor: pointer;
 }
 
 .page__login div:nth-child(3) > label {
-  padding: 0;
+  line-height: 2rem;
+  position: static;
+  text-transform: capitalize;
+  font-size: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
