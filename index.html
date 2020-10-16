@@ -30,14 +30,15 @@
                 type="text"
                 class="header__search-input"
                 placeholder="Tìm kiếm trên Tix"
+                autofocus
               />
               <div class="header__result scroll-bar--custom">
                 <div class="header__result-nav">mua vé ngay</div>
                 <div class="header__result-nav">đăng nhập</div>
-                <div class="header__result-nav">lịch chiếu</div>
-                <div class="header__result-nav">cụm rạp</div>
-                <div class="header__result-nav">tin tức</div>
-                <div class="header__result-nav">ứng dụng</div>
+                <a href="#homeFilms" class="header__result-nav">lịch chiếu</a>
+                <a href="#homeCinemaComplex" class="header__result-nav">cụm rạp</a>
+                <a href="#news" class="header__result-nav">tin tức</a>
+                <a href="#app" class="header__result-nav">ứng dụng</a>
                 <div class="header__result-item">
                   <a href="#">Tên phim</a
                   ><button class="button button--primary">Mua vé</button>
@@ -187,7 +188,7 @@
     </section>
     <!-- END BANNER -->
     <!-- START HOME FILMS -->
-    <section class="homeFilms">
+    <section class="homeFilms" id="homeFilms">
       <div class="container">
         <h2 class="homeFilms__title title">lịch chiếu</h2>
         <div class="homeFilms__inner">
@@ -705,7 +706,7 @@
     </section>
     <!-- END HOME FILMS -->
     <!-- START HOME CINEMA-COMPLEX -->
-    <section class="homeCinemaComplex">
+    <section class="homeCinemaComplex" id="homeCinemaComplex">
      <div class="container">
         <h2 class="title">
           cụm rạp
@@ -912,7 +913,7 @@
     </section>
     <!-- END HOME CINEMA-COMPLEX -->
     <!-- START NEWS -->
-    <section class="news">
+    <section class="news" id="news">
      <div class="container">
         <div class="news__titles">
           <h2 class="news__titles-item active">điện ảnh 24h</h2>
@@ -1031,7 +1032,7 @@
     </section>
     <!-- END NEWS -->
     <!-- START APP -->
-    <section class="app">
+    <section class="app" id="app">
       <div class="container">
         <div class="app__inner wrap">
           <div class="app__left">
