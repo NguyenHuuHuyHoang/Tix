@@ -1006,12 +1006,12 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-orient: vertical;
@@ -1028,10 +1028,27 @@ body {
           transform: rotateY(0.5turn);
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
 @media only screen and (min-width: 48em) {
   .homeFilms .card-back {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: calc(70rem/ 4);
     height: calc((70rem/ 4) * 1.4);
   }
@@ -1055,12 +1072,6 @@ body {
 
 .homeFilms .card__info p {
   margin-bottom: .5rem;
-}
-
-@media only screen and (min-width: 48em) {
-  .homeFilms .card__info {
-    display: none;
-  }
 }
 
 .homeFilms .card__rating {
@@ -1113,10 +1124,16 @@ body {
 }
 
 .homeFilms .card__btn-play, .homeFilms .card__btn-buy {
-  width: 100%;
+  width: 30%;
   padding: 1rem 0;
   font-size: 1.4rem;
   font-weight: 500;
+}
+
+@media only screen and (min-width: 48em) {
+  .homeFilms .card__btn-play, .homeFilms .card__btn-buy {
+    width: 100%;
+  }
 }
 
 .homeFilms .card__btn-play {
